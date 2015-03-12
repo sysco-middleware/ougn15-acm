@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="no.sysco.model.modules.IncidentsModule">
+      <AppModuleConfig name="IncidentsModuleLocal" jbo.project="no.sysco.model.Model" ApplicationName="no.sysco.model.modules.IncidentsModule" DeployPlatform="LOCAL">
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="no.sysco.model.modules.IncidentsModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/ougn15-acm-dbDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig jbo.project="no.sysco.model.Model" ApplicationName="no.sysco.model.modules.IncidentsModule" DeployPlatform="LOCAL" name="IncidentsModuleShared">
+         <AM-Pooling jbo.ampool.dynamicjdbccredentials="false" jbo.ampool.resetnontransactionalstate="false" jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Database jbo.TypeMapEntries="OracleApps"/>
+         <Security AppModuleJndiName="no.sysco.model.modules.IncidentsModule"/>
+         <Custom ns0:JDBCDataSource="jdbc/HCMDS" ns0:ns0="http://xmlns.oracle.com/bc4j/configuration" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

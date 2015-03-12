@@ -1,0 +1,51 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="ougn15-acm-mds" className="oracle.tip.tools.ide.soamds.adapter.MDSProvider"
+             credentialStoreKey="ougn15-acm-mds" xmlns="">
+    <Factory className="oracle.tip.tools.ide.soamds.adapter.MDSProviderFactory"/>
+    <RefAddresses>
+      <SecureRefAddr addrType="DBMDSJDBCPASSWORD"/>
+      <StringRefAddr addrType="ConnectionName">
+        <Contents>ougn15-acm-mds</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="DBMDS_JDBC_USERID">
+        <Contents>OUGN15_MDS</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="ConnectionType">
+        <Contents>oracle.mds.persistence.stores.db.DBMetadataStore</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="MDS_PARTITION_NAME">
+        <Contents>soa-infra</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="DBMDSDBCONNECTIONNAME">
+        <Contents>ougn15-acm-db-mds</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="DBMDS_JDBC_URL">
+        <Contents>jdbc:oracle:thin:@ougn15-acm:1521:XE</Contents>
+      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+  <Reference name="ougn15-acm-db" className="oracle.jdeveloper.db.adapter.DatabaseProvider" partial="true"
+             manageInOracleEnterpriseManager="true" deployable="true" xmlns="">
+    <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+    <RefAddresses>
+      <StringRefAddr addrType="sid">
+        <Contents>XE</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="subtype">
+        <Contents>oraJDBC</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="user">
+        <Contents>hcm</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="hostname">
+        <Contents>ougn15-acm</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="port">
+        <Contents>1521</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="oraDriverType">
+        <Contents>thin</Contents>
+      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

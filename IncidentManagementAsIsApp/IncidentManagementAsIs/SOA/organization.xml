@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:organization xmlns:ns2="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns1="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpm/identity" xmlns:ns0="http://xmlns.oracle.com/bpm/organization">
+   <ns0:updateExistingObjects>false</ns0:updateExistingObjects>
+   <ns0:organizationalUnits>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>c5622a9b-93db-46ae-b93a-9a2877ecd72c</ns0:organizationalUnitId>
+         <ns0:organizationalUnitName>SYSCO</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>47dda7e9-6064-4f3e-9f1d-ff46653bec08</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>c5622a9b-93db-46ae-b93a-9a2877ecd72c</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SYSCO</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>SERVICE DESK</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>dc346132-5f35-49a9-94e6-c9beee61bdaa</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>c5622a9b-93db-46ae-b93a-9a2877ecd72c</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SYSCO</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>IT</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>8aa1e957-11eb-4894-9de2-d4c6f314dc98</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>c5622a9b-93db-46ae-b93a-9a2877ecd72c</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SYSCO</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>MIDDLEWARE</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>7909d69e-9545-4b4d-9541-dfab1b26f509</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>c5622a9b-93db-46ae-b93a-9a2877ecd72c</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SYSCO</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>FINANCE</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+   </ns0:organizationalUnits>
+   <ns0:applicationRoles>
+      <ns0:applicationRole id="IncidentManagementAsIs.ProcessOwner" isProcessRole="true">
+         <ns3:name>IncidentManagementAsIs.Process Owner</ns3:name>
+         <ns0:processRole id="ProcessOwner" name="Process Owner"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementAsIs.ProcessReviewer" isProcessRole="true">
+         <ns3:name>IncidentManagementAsIs.Process Reviewer</ns3:name>
+         <ns0:processRole id="ProcessReviewer" name="Process Reviewer"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementAsIs.ServiceDeskRep" isProcessRole="true">
+         <ns3:name>IncidentManagementAsIs.Service Desk Rep</ns3:name>
+         <ns0:processRole id="ServiceDeskRep" name="Service Desk Rep"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementAsIs.SupportLevel1" isProcessRole="true">
+         <ns3:name>IncidentManagementAsIs.Support Rep</ns3:name>
+         <ns0:processRole id="SupportLevel1" name="Support Rep"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementAsIs.User" isProcessRole="true">
+         <ns3:name>IncidentManagementAsIs.User</ns3:name>
+         <ns0:processRole id="User" name="User"/>
+      </ns0:applicationRole>
+   </ns0:applicationRoles>
+   <ns0:applicationRoleOrgUnitCalendarAssociations/>
+   <ns0:participantPropertiesList/>
+   <ns0:holidayRules/>
+   <ns0:calendarRules/>
+   <ns0:businessParameters/>
+</ns0:organization>

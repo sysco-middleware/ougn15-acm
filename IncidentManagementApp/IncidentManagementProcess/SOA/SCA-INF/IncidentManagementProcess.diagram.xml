@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="IncidentManagementProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="26" width="137" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="19" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="IncidentManagementProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>startCase</dgm:item>
+            <dgm:item>attainMilestone</dgm:item>
+            <dgm:item>revokeMilestone</dgm:item>
+            <dgm:item>abortCase</dgm:item>
+            <dgm:item>suspendCase</dgm:item>
+            <dgm:item>resumeCase</dgm:item>
+            <dgm:item>closeCase</dgm:item>
+            <dgm:item>reopenCase</dgm:item>
+            <dgm:item>forceCloseCase</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="DepartmentAttentionProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="228" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="221" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="DepartmentAttentionProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gComponent name="IncidentManagementProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="235" Y="95" width="130" height="111">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="225" Y="88" width="150" height="127">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="IncidentManagementProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:outputPort name="IncidentManagementProcessRules_IncidentManagementProcessRules" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/IncidentManagementProcessRules_IncidentManagementProcessRules#wsdl.interface(IDecisionService)" callbackInterface="http://xmlns.oracle.com/bpm/case/caseDecision/IncidentManagementProcessRules_IncidentManagementProcessRules#wsdl.interface(IDecisionService)"/>
+        <dgm:outputPort name="DepartmentAttentionProcess.service.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="AttendIncident.service.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/case20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="IncidentManagementProcessRules">
+        <dgm:body borderWidth="2" arcRad="20" X="463" Y="43" width="130" height="61">
+            <dgm:borderColor r="178" g="138" b="53"/>
+            <dgm:lightBgColor r="255" g="226" b="142"/>
+            <dgm:darkBgColor r="255" g="198" b="77"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="453" Y="36" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="IncidentManagementProcessRules_IncidentManagementProcessRules" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/IncidentManagementProcessRules_IncidentManagementProcessRules#wsdl.interface(IDecisionService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/rules/plugins/resources/images/soa/decision_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="DepartmentAttentionProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="463" Y="178" width="130" height="111">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="453" Y="171" width="150" height="127">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="DepartmentAttentionProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DepartmentAttentionProcess#wsdl.interface(DepartmentAttentionProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.AttendIncident.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="HumanTasks.ApproveAttention.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="HumanTasks.EscalateIncident.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="EscalateIncident">
+        <dgm:body borderWidth="2" arcRad="20" X="676" Y="298" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="666" Y="291" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="AttendIncident">
+        <dgm:body borderWidth="2" arcRad="20" X="676" Y="90" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="666" Y="83" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ApproveAttention">
+        <dgm:body borderWidth="2" arcRad="20" X="676" Y="203" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="666" Y="196" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="IncidentManagementProcess.service" target="IncidentManagementProcess/IncidentManagementProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="36" X2="192" Y2="36"/>
+        <dgm:gSegment X1="192" Y1="36" X2="192" Y2="120"/>
+        <dgm:gSegment X1="192" Y1="120" X2="225" Y2="120"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="IncidentManagementProcess/IncidentManagementProcessRules_IncidentManagementProcessRules" target="IncidentManagementProcessRules/IncidentManagementProcessRules_IncidentManagementProcessRules" width="2">
+        <dgm:gSegment X1="375" Y1="120" X2="399" Y2="120"/>
+        <dgm:gSegment X1="399" Y1="120" X2="399" Y2="68"/>
+        <dgm:gSegment X1="399" Y1="68" X2="453" Y2="68"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="IncidentManagementProcess/DepartmentAttentionProcess.service.reference" target="DepartmentAttentionProcess/DepartmentAttentionProcess.service" width="2">
+        <dgm:gSegment X1="375" Y1="145" X2="429" Y2="145"/>
+        <dgm:gSegment X1="429" Y1="145" X2="429" Y2="203"/>
+        <dgm:gSegment X1="429" Y1="203" X2="453" Y2="203"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="DepartmentAttentionProcess/HumanTasks.AttendIncident.reference" target="AttendIncident/TaskService" width="2">
+        <dgm:gSegment X1="603" Y1="203" X2="642" Y2="203"/>
+        <dgm:gSegment X1="642" Y1="203" X2="642" Y2="115"/>
+        <dgm:gSegment X1="642" Y1="115" X2="666" Y2="115"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="DepartmentAttentionProcess/HumanTasks.ApproveAttention.reference" target="ApproveAttention/TaskService" width="2">
+        <dgm:gSegment X1="603" Y1="228" X2="666" Y2="228"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="IncidentManagementProcess/AttendIncident.service.reference" target="AttendIncident/TaskService" width="2">
+        <dgm:gSegment X1="375" Y1="170" X2="414" Y2="170"/>
+        <dgm:gSegment X1="414" Y1="170" X2="414" Y2="130"/>
+        <dgm:gSegment X1="414" Y1="130" X2="627" Y2="130"/>
+        <dgm:gSegment X1="627" Y1="130" X2="627" Y2="115"/>
+        <dgm:gSegment X1="627" Y1="115" X2="666" Y2="115"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="DepartmentAttentionProcess/HumanTasks.EscalateIncident.reference" target="EscalateIncident/TaskService" width="2">
+        <dgm:gSegment X1="603" Y1="253" X2="627" Y2="253"/>
+        <dgm:gSegment X1="627" Y1="253" X2="627" Y2="323"/>
+        <dgm:gSegment X1="627" Y1="323" X2="666" Y2="323"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="DepartmentAttentionProcess.service" target="DepartmentAttentionProcess/DepartmentAttentionProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="238" X2="399" Y2="238"/>
+        <dgm:gSegment X1="399" Y1="238" X2="399" Y2="203"/>
+        <dgm:gSegment X1="399" Y1="203" X2="453" Y2="203"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

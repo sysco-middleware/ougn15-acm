@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:organization xmlns:ns2="http://xmlns.oracle.com/bpm/identity" xmlns:ns1="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns0="http://xmlns.oracle.com/bpm/organization">
+   <ns0:processOrganizationalUnitId>bbe2bf51-8dde-48fb-ad1c-c659e26b2307</ns0:processOrganizationalUnitId>
+   <ns0:processOrganizationalUnitName>SERVICE DESK</ns0:processOrganizationalUnitName>
+   <ns0:updateExistingObjects>true</ns0:updateExistingObjects>
+   <ns0:organizationalUnits>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>bbe2bf51-8dde-48fb-ad1c-c659e26b2307</ns0:organizationalUnitId>
+         <ns0:organizationalUnitName>SERVICE DESK</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+         <ns0:calendarRuleId>4f1b975d-7441-4a20-8a93-8003d61178da</ns0:calendarRuleId>
+         <ns0:calendarRuleName>Calendar</ns0:calendarRuleName>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>fc2ad82c-f0ef-40fb-9b23-6035964cfbba</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>bbe2bf51-8dde-48fb-ad1c-c659e26b2307</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SERVICE DESK</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>TI SUPPORT</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>9f6faa49-9bb7-4dfb-b846-e808bf88bf36</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>bbe2bf51-8dde-48fb-ad1c-c659e26b2307</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SERVICE DESK</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>FINANCE SUPPORT</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+      <ns0:organizationalUnit>
+         <ns0:organizationalUnitId>4cd2c100-bedc-482c-bcbe-c77ab79c639a</ns0:organizationalUnitId>
+         <ns0:parentOrganizationalUnitId>bbe2bf51-8dde-48fb-ad1c-c659e26b2307</ns0:parentOrganizationalUnitId>
+         <ns0:parentOrganizationalUnitName>SERVICE DESK</ns0:parentOrganizationalUnitName>
+         <ns0:organizationalUnitName>MIDDLEWARE SUPPORT</ns0:organizationalUnitName>
+         <ns0:description></ns0:description>
+      </ns0:organizationalUnit>
+   </ns0:organizationalUnits>
+   <ns0:applicationRoles>
+      <ns0:applicationRole id="IncidentManagementProcess.ProcessOwner" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.Process Owner</ns2:name>
+         <ns0:processRole id="ProcessOwner" name="Process Owner"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementProcess.ProcessReviewer" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.Process Reviewer</ns2:name>
+         <ns0:processRole id="ProcessReviewer" name="Process Reviewer"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementProcess.ServiceDeskRep" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.Service Desk Rep</ns2:name>
+         <ns0:processRole id="ServiceDeskRep" name="Service Desk Rep"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementProcess.Support" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.Support</ns2:name>
+         <ns0:member type="USER">
+            <ns0:name>weblogic</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="Support" name="Support"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementProcess.DepartmentManager" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.Department Manager</ns2:name>
+         <ns0:member type="USER">
+            <ns0:name>weblogic</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="DepartmentManager" name="Department Manager"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="IncidentManagementProcess.ServiceDesk" isProcessRole="true">
+         <ns2:name>IncidentManagementProcess.ServiceDesk</ns2:name>
+         <ns0:processRole id="ServiceDesk" name="ServiceDesk"/>
+      </ns0:applicationRole>
+   </ns0:applicationRoles>
+   <ns0:applicationRoleOrgUnitCalendarAssociations/>
+   <ns0:participantPropertiesList/>
+   <ns0:holidayRules/>
+   <ns0:calendarRules>
+      <ns0:calendarRule>
+         <ns0:name>Calendar</ns0:name>
+         <ns0:id>4f1b975d-7441-4a20-8a93-8003d61178da</ns0:id>
+         <ns0:timeZone>Europe/Berlin</ns0:timeZone>
+         <ns0:workdayList>
+            <ns0:workday>
+               <ns0:weekDay>Sunday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Monday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Tuesday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Wednesday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Thursday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Friday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.414+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.414+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+            <ns0:workday>
+               <ns0:weekDay>Saturday</ns0:weekDay>
+               <ns0:workPeriod>
+                  <ns0:startTime>08:00:36.415+01:00</ns0:startTime>
+                  <ns0:endTime>12:00:36.415+01:00</ns0:endTime>
+               </ns0:workPeriod>
+               <ns0:workPeriod>
+                  <ns0:startTime>13:00:36.415+01:00</ns0:startTime>
+                  <ns0:endTime>17:00:36.415+01:00</ns0:endTime>
+               </ns0:workPeriod>
+            </ns0:workday>
+         </ns0:workdayList>
+      </ns0:calendarRule>
+   </ns0:calendarRules>
+   <ns0:businessParameters/>
+</ns0:organization>

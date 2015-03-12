@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IncidentsModule"
+  Version="12.1.3.13.52"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="IncidentAttentionsView1"
+    ViewObjectName="no.sysco.model.uviews.IncidentAttentionsView"/>
+  <ViewUsage
+    Name="IncidentsView1"
+    ViewObjectName="no.sysco.model.uviews.IncidentsView"/>
+  <ViewUsage
+    Name="IncidentAttentionsView2"
+    ViewObjectName="no.sysco.model.uviews.IncidentAttentionsView"/>
+  <ViewLinkUsage
+    Name="IncIncAttFkLink1"
+    ViewLinkObjectName="no.sysco.model.uviews.IncIncAttFkLink"
+    SrcViewUsageName="no.sysco.model.modules.IncidentsModule.IncidentsView1"
+    DstViewUsageName="no.sysco.model.modules.IncidentsModule.IncidentAttentionsView2"
+    Reversed="false"/>
+</AppModule>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="ListIncidentsPageDef"
+                Package="Incident">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="IncidentManagerDC" id="IncidentManagerDCIterator"/>
+    <accessorIterator MasterBinding="IncidentManagerDCIterator" Binds="incidents" RangeSize="25"
+                      DataControl="IncidentManagerDC" BeanClass="beans.Incident" id="incidentsIterator"/>
+    <accessorIterator MasterBinding="IncidentManagerDCIterator" Binds="selectedIncident" RangeSize="25"
+                      DataControl="IncidentManagerDC" BeanClass="beans.Incident" id="selectedIncidentIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="incidentsIterator" id="incidents">
+      <nodeDefinition DefName="beans.Incident" Name="incidents0">
+        <AttrNames>
+          <Item Value="incident_id"/>
+          <Item Value="employee_id"/>
+          <Item Value="category_name"/>
+          <Item Value="current_status"/>
+          <Item Value="request_date"/>
+          <Item Value="description"/>
+          <Item Value="blank"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <methodAction id="loadIncidents" RequiresUpdateModel="true" Action="invokeMethod" MethodName="loadIncidents"
+                  IsViewObjectMethod="false" DataControl="IncidentManagerDC"
+                  InstanceName="data.IncidentManagerDC.dataProvider"/>
+    <attributeValues IterBinding="selectedIncidentIterator" id="incident_id">
+      <AttrNames>
+        <Item Value="incident_id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="selectedIncidentIterator" id="employee_id">
+      <AttrNames>
+        <Item Value="employee_id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="selectedIncidentIterator" id="request_date">
+      <AttrNames>
+        <Item Value="request_date"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="selectedIncidentIterator" id="category_name">
+      <AttrNames>
+        <Item Value="category_name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="selectedIncidentIterator" id="description">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="selectedIncidentIterator" id="current_status">
+      <AttrNames>
+        <Item Value="current_status"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentManagerDCIterator" id="idIncidente">
+      <AttrNames>
+        <Item Value="idIncidente"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

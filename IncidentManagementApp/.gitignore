@@ -1,0 +1,8 @@
+boxes/virtualbox/.vagrant/**
+*.vdi
+
+**/classes/**
+**/.data/**
+*.class
+
+**/build/**

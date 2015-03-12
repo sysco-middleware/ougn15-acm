@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-mobile-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.0">
+  <view id="ListIncidents">
+    <page>/Incident/ListIncidents.amx</page>
+  </view>
+  <view id="CreateIncident">
+    <page>/Incident/CreateIncident.amx</page>
+  </view>
+  <view id="login">
+    <page>/Incident/login.amx</page>
+  </view>
+  <view id="Detail">
+    <page>/Incident/Detail.amx</page>
+  </view>
+  <control-flow-rule id="__5">
+    <from-activity-id>ListIncidents</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>create</from-outcome>
+      <to-activity-id>CreateIncident</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__10">
+      <from-outcome>back</from-outcome>
+      <to-activity-id>login</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__1">
+      <from-outcome>detail</from-outcome>
+      <to-activity-id>Detail</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__7">
+    <from-activity-id>CreateIncident</from-activity-id>
+    <control-flow-case id="__8">
+      <from-outcome>back</from-outcome>
+      <to-activity-id>ListIncidents</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__4">
+    <from-activity-id>login</from-activity-id>
+    <control-flow-case id="__9">
+      <from-outcome>enter</from-outcome>
+      <to-activity-id>ListIncidents</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__2">
+    <from-activity-id>Detail</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome>back</from-outcome>
+      <to-activity-id>ListIncidents</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-mobile-config>

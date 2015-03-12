@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.13.52" id="DataBindings"
+             SeparateXMLFiles="false" Package="incidentdataui" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/IncidentManagementProcess/IncidentManagementProcess/data/view/incident.jspx"
+          usageId="incidentdataui_incidentPageDef"/>
+    <page path="/IncidentManagementProcess/IncidentManagementProcess/data/tf/incident.xml#incident@loadIncident"
+          usageId="incidentdataui_incident_incident_loadIncidentPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="incidentdataui_incidentPageDef"
+          path="IncidentManagementProcess.IncidentManagementProcess.data.view.incidentPageDef"/>
+    <page id="incidentdataui_incident_incident_loadIncidentPageDef"
+          path="IncidentManagementProcess.IncidentManagementProcess.data.tf.incident_incident_loadIncidentPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="IncidentDataUI_IncidentManagementProcess_incident"
+        path="incidentdataui.IncidentDataUI_IncidentManagementProcess_incident"/>
+    <BC4JDataControl id="IncidentsModuleDataControl" Package="no.sysco.model.modules"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="IncidentsModuleShared" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

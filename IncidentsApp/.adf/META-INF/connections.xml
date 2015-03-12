@@ -1,0 +1,12 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="Incident" className="oracle.adf.model.connection.rest.RestConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.rest.RestConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="Incident">
+        <Contents>
+          <restconnection name="Incident" url="http://192.168.0.100:7021/IncidentService/IncidentsResource"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

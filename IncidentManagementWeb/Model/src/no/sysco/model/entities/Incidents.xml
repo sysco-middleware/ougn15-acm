@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Incidents"
+  Version="12.1.3.13.52"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="INCIDENTS"
+  AliasName="Incidents"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="IncidentId"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="INCIDENT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="INCIDENTS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="EmployeeId"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="EMPLOYEE_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="INCIDENTS"/>
+  <Attribute
+    Name="RequestDate"
+    IsNotNull="true"
+    ColumnName="REQUEST_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="INCIDENTS"/>
+  <Attribute
+    Name="CategoryName"
+    Precision="100"
+    ColumnName="CATEGORY_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INCIDENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="500"
+    ColumnName="DESCRIPTION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INCIDENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CurrentStatus"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="CURRENT_STATUS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INCIDENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="IncidentAttentions"
+    Association="no.sysco.model.entities.IncIncAttFkAssoc"
+    AssociationEnd="no.sysco.model.entities.IncIncAttFkAssoc.IncidentAttentions"
+    AssociationOtherEnd="no.sysco.model.entities.IncIncAttFkAssoc.Incidents"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="IncidentPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="INCIDENT_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="no.sysco.model.entities.Incidents.IncidentId"/>
+    </AttrArray>
+  </Key>
+</Entity>

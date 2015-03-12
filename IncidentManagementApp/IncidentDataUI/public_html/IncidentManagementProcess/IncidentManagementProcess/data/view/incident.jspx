@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="incident.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelGroupLayout layout="horizontal" inlineStyle="padding: 5px;" id="pgl1">
+                    <af:panelGroupLayout layout="vertical" id="pgl2">
+                        <af:panelFormLayout labelAlignment="start" id="pfl1">
+                            <af:inputText value="#{bindings.incidentId.inputValue}"
+                                          label="Incident ID"
+                                          required="#{bindings.incidentId.hints.mandatory}"
+                                          columns="#{bindings.incidentId.hints.displayWidth}"
+                                          maximumLength="#{bindings.incidentId.hints.precision}"
+                                          shortDesc="#{bindings.incidentId.hints.tooltip}"
+                                          disabled="#{param.mode eq 'r'}" id="it1" readOnly="true">
+                                <f:validator binding="#{bindings.incidentId.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.attentionApprovelOutcome.inputValue}"
+                                          label="Approve Outcome"
+                                          required="#{bindings.attentionApprovelOutcome.hints.mandatory}"
+                                          columns="#{bindings.attentionApprovelOutcome.hints.displayWidth}"
+                                          maximumLength="#{bindings.attentionApprovelOutcome.hints.precision}"
+                                          shortDesc="#{bindings.attentionApprovelOutcome.hints.tooltip}"
+                                          disabled="#{param.mode eq 'r'}" id="it2" readOnly="true">
+                                <f:validator binding="#{bindings.attentionApprovelOutcome.validator}"/>
+                            </af:inputText>
+                        </af:panelFormLayout>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="vertical" id="pgl5">
+                    <af:panelHeader text="Incidents" id="ph1">
+                        <af:panelFormLayout id="pfl2">
+                            <af:panelLabelAndMessage label="#{bindings.EmployeeId.hints.label}" id="plam2">
+                                <af:outputText value="#{bindings.EmployeeId.inputValue}"
+                                               shortDesc="#{bindings.EmployeeId.hints.tooltip}" id="ot3">
+                                    <af:convertNumber groupingUsed="false" pattern="#{bindings.EmployeeId.format}"/>
+                                </af:outputText>
+                            </af:panelLabelAndMessage>
+                            <af:panelLabelAndMessage label="#{bindings.RequestDate.hints.label}" id="plam3">
+                                <af:outputText value="#{bindings.RequestDate.inputValue}"
+                                               shortDesc="#{bindings.RequestDate.hints.tooltip}" id="ot4">
+                                    <af:convertDateTime pattern="#{bindings.RequestDate.format}"/>
+                                </af:outputText>
+                            </af:panelLabelAndMessage>
+                            <af:panelLabelAndMessage label="#{bindings.CategoryName.hints.label}" id="plam4">
+                                <af:outputText value="#{bindings.CategoryName.inputValue}"
+                                               shortDesc="#{bindings.CategoryName.hints.tooltip}" id="ot5"/>
+                            </af:panelLabelAndMessage>
+                            <af:panelLabelAndMessage label="#{bindings.Description.hints.label}" id="plam5">
+                                <af:outputText value="#{bindings.Description.inputValue}"
+                                               shortDesc="#{bindings.Description.hints.tooltip}" id="ot6"/>
+                            </af:panelLabelAndMessage>
+                            <f:facet name="footer"/>
+                        </af:panelFormLayout>
+                    </af:panelHeader>
+                    <af:panelHeader text="Attentions" id="ph2">
+                        <af:table rows="#{bindings.IncidentAttentionsView2.rangeSize}"
+                                  fetchSize="#{bindings.IncidentAttentionsView2.rangeSize}"
+                                  emptyText="#{bindings.IncidentAttentionsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  var="row" value="#{bindings.IncidentAttentionsView2.collectionModel}"
+                                  rowBandingInterval="0"
+                                  selectedRowKeys="#{bindings.IncidentAttentionsView2.collectionModel.selectedRow}"
+                                  selectionListener="#{bindings.IncidentAttentionsView2.collectionModel.makeCurrent}"
+                                  rowSelection="single" id="t2">
+                            <af:column headerText="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.label}"
+                                       sortProperty="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.name}"
+                                       sortable="false" id="c1">
+                                <af:outputText value="#{row.IncidentAttentionId}"
+                                               shortDesc="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.tooltip}"
+                                               id="ot8">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.format}"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.IncidentAttentionsView2.hints.IncidentId.label}"
+                                       sortProperty="#{bindings.IncidentAttentionsView2.hints.IncidentId.name}"
+                                       sortable="false" id="c2">
+                                <af:outputText value="#{row.IncidentId}"
+                                               shortDesc="#{bindings.IncidentAttentionsView2.hints.IncidentId.tooltip}"
+                                               id="ot9">
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.IncidentAttentionsView2.hints.IncidentId.format}"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.IncidentAttentionsView2.hints.AttentionDate.label}"
+                                       sortProperty="#{bindings.IncidentAttentionsView2.hints.AttentionDate.name}"
+                                       sortable="false" id="c3">
+                                <af:outputText value="#{row.AttentionDate}"
+                                               shortDesc="#{bindings.IncidentAttentionsView2.hints.AttentionDate.tooltip}"
+                                               id="ot10">
+                                    <af:convertDateTime pattern="#{bindings.IncidentAttentionsView2.hints.AttentionDate.format}"/>
+                                </af:outputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.IncidentAttentionsView2.hints.Actions.label}"
+                                       sortProperty="#{bindings.IncidentAttentionsView2.hints.Actions.name}"
+                                       sortable="false" id="c4">
+                                <af:outputText value="#{row.Actions}"
+                                               shortDesc="#{bindings.IncidentAttentionsView2.hints.Actions.tooltip}"
+                                               id="ot11"/>
+                            </af:column>
+                            <af:column headerText="#{bindings.IncidentAttentionsView2.hints.Username.label}"
+                                       sortProperty="#{bindings.IncidentAttentionsView2.hints.Username.name}"
+                                       sortable="false" id="c5">
+                                <af:outputText value="#{row.Username}"
+                                               shortDesc="#{bindings.IncidentAttentionsView2.hints.Username.tooltip}"
+                                               id="ot12"/>
+                            </af:column>
+                        </af:table>
+                    </af:panelHeader>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="horizontal" inlineStyle="padding: 5px;" id="pgl3">
+                    <af:toolbar id="t1">
+                        <af:button actionListener="#{bindings.save.execute}" text="#{resources.CF_SAVE}"
+                                   disabled="#{param.mode eq 'r'}" action="save" id="cfSave"/>
+                        <af:button immediate="true" text="#{resources.CF_RESET}" disabled="#{param.mode eq 'r'}"
+                                   id="cfReset">
+                            <af:resetActionListener/>
+                        </af:button>
+                    </af:toolbar>
+                    <af:spacer width="230px" id="s1"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout layout="vertical" inlineStyle="padding: 5px;" id="pgl4">
+                    <af:outputText value="#{resources.CF_READ_ONLY_MSG}" visible="#{param.mode eq 'r'}" id="ot1"/>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="incidentPageDef"
+                Package="IncidentManagementProcess.IncidentManagementProcess.data.view">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="IncidentDataUI_IncidentManagementProcess_incident"
+              id="IncidentDataUI_IncidentManagementProcess_incidentIterator"/>
+    <iterator Binds="IncidentsView1" RangeSize="25" DataControl="IncidentsModuleDataControl"
+              id="IncidentsView1Iterator" ChangeEventPolicy="ppr"/>
+    <iterator Binds="IncidentAttentionsView2" RangeSize="25" DataControl="IncidentsModuleDataControl"
+              id="IncidentAttentionsView2Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <methodAction id="save" RequiresUpdateModel="true" Action="invokeMethod" MethodName="save"
+                  IsViewObjectMethod="false" DataControl="IncidentDataUI_IncidentManagementProcess_incident"
+                  InstanceName="data.IncidentDataUI_IncidentManagementProcess_incident.dataProvider"
+                  ReturnName="data.IncidentDataUI_IncidentManagementProcess_incident.methodResults.save_IncidentDataUI_IncidentManagementProcess_incident_dataProvider_save_result"/>
+    <attributeValues IterBinding="IncidentDataUI_IncidentManagementProcess_incidentIterator" id="incidentId">
+      <AttrNames>
+        <Item Value="incidentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentDataUI_IncidentManagementProcess_incidentIterator"
+                     id="attentionApprovelOutcome">
+      <AttrNames>
+        <Item Value="attentionApprovelOutcome"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="IncidentId">
+      <AttrNames>
+        <Item Value="IncidentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="EmployeeId">
+      <AttrNames>
+        <Item Value="EmployeeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="RequestDate">
+      <AttrNames>
+        <Item Value="RequestDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="CategoryName">
+      <AttrNames>
+        <Item Value="CategoryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="IncidentAttentionsView2Iterator" id="IncidentAttentionsView2">
+      <nodeDefinition DefName="no.sysco.model.uviews.IncidentAttentionsView" Name="IncidentAttentionsView20">
+        <AttrNames>
+          <Item Value="IncidentAttentionId"/>
+          <Item Value="IncidentId"/>
+          <Item Value="AttentionDate"/>
+          <Item Value="Actions"/>
+          <Item Value="Username"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.13.52" id="DataControls"
+                    Package="incidentdataui">
+  <AdapterDataControl id="IncidentDataUI_IncidentManagementProcess_incident"
+                      FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.bpm.datacontrol.definition.BPMBeanDefinition12C" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true"
+                      Definition="com.oracle.xmlns.bpm.bpmobject.data.incident.IncidentType"
+                      BeanClass="com.oracle.xmlns.bpm.bpmobject.data.incident.IncidentType"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <bpm-bean-definition BeanClass="com.oracle.xmlns.bpm.bpmobject.data.incident.IncidentType" dataObject="incident"
+                           element="Incident" dataObjectNamespace="http://xmlns.oracle.com/bpm/bpmobject/Data/Incident"
+                           serviceType="case" formType="Data"
+                           DataControlHandler="oracle.adf.model.adapter.bean.jpa.JPQLDataFilterHandler"
+                           xmlns="http://xmlns.oracle.com/adfm/adapter/bean/bpm"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://xmlns.oracle.com/CaseService" localpart="IncidentManagementProcess.service"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://xmlns.oracle.com/CaseService" localpart="CaseServicePort"/>
+         <runtime/>
+         <operations>
+            <operation name="startCase"/>
+            <operation name="attainMilestone"/>
+            <operation name="revokeMilestone"/>
+            <operation name="abortCase"/>
+            <operation name="suspendCase"/>
+            <operation name="resumeCase"/>
+            <operation name="closeCase"/>
+            <operation name="reopenCase"/>
+            <operation name="forceCloseCase"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

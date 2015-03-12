@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="Incidents" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <!--<amx:commandButton id="cb1" text="refresh" actionListener="#{bindings.loadIncidents.execute}"/>-->
+       <amx:commandButton id="cb1" text="back" action="__back"/> 
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton id="cb2" text="New Incident..." action="create"/>
+    </amx:facet>
+    <amx:listView var="row" value="#{bindings.incidents.collectionModel}" fetchSize="#{bindings.incidents.rangeSize}"
+                  selectedRowKeys="#{bindings.incidents.collectionModel.selectedRow}"
+                  selectionListener="#{bindings.incidents.collectionModel.makeCurrent}" showMoreStrategy="autoScroll"
+                  bufferStrategy="viewport" id="lv1" collapsibleDividers="true" showDividerCount="true"
+                  dividerMode="all" dividerAttribute="current_status">
+      <amx:listItem id="li1" action="detail">
+        <amx:tableLayout width="100%" id="tl1">
+          <amx:rowLayout id="rl1">
+            <amx:cellFormat width="10px" rowSpan="2" id="cf4"/>
+            <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'36':'32'}px" id="cf2">
+              <amx:outputText value="#{row.category_name}" id="ot3"/>
+            </amx:cellFormat>
+            <amx:cellFormat width="10px" rowSpan="2" id="cf3"/>
+            <amx:cellFormat width="40%" halign="end" id="cf1">
+              <amx:outputText value="#{row.blank}" styleClass="adfmf-listItem-highlightText" id="ot2"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+          <amx:rowLayout id="rl2">
+            <amx:cellFormat width="60%" height="#{deviceScope.device.os=='Android'?'22':'19'}px" id="cf6">
+              <amx:outputText value="#{row.description}" styleClass="adfmf-listItem-captionText" id="ot5"/>
+            </amx:cellFormat>
+            <amx:cellFormat width="40%" halign="end" id="cf5">
+              <amx:outputText value="#{row.request_date}" styleClass="adfmf-listItem-captionText" id="ot4"/>
+            </amx:cellFormat>
+          </amx:rowLayout>
+        </amx:tableLayout>
+        <amx:setPropertyListener id="spl1" from="#{row.incident_id}" type="action"
+                                 to="#{bindings.incident_id.inputValue}"/>
+        <amx:setPropertyListener id="spl2" from="#{row.employee_id}" type="action"
+                                 to="#{bindings.employee_id.inputValue}"/>
+        <amx:setPropertyListener id="spl3" from="#{row.request_date}" type="action"
+                                 to="#{bindings.request_date.inputValue}"/>
+        <amx:setPropertyListener id="spl4" from="#{row.category_name}" to="#{bindings.category_name.inputValue}"
+                                 type="action"/>
+        <amx:setPropertyListener id="spl5" from="#{row.description}" to="#{bindings.description.inputValue}"
+                                 type="action"/>
+        <amx:setPropertyListener id="spl6" from="#{row.current_status}" to="#{bindings.current_status.inputValue}"
+                                 type="action"/>
+        <amx:setPropertyListener id="spl7" from="#{row.incident_id}" type="action"
+                                 to="#{bindings.idIncidente.inputValue}"/>
+      </amx:listItem>
+      
+      
+    </amx:listView>
+    
+    
+    
+  </amx:panelPage>
+</amx:view>

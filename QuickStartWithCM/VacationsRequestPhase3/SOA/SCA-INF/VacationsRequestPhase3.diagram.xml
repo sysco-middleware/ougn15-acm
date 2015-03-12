@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="VacationsRequestPhase3.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="156" width="137" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="149" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="VacationsRequestPhase3.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>startCase</dgm:item>
+            <dgm:item>attainMilestone</dgm:item>
+            <dgm:item>revokeMilestone</dgm:item>
+            <dgm:item>abortCase</dgm:item>
+            <dgm:item>suspendCase</dgm:item>
+            <dgm:item>resumeCase</dgm:item>
+            <dgm:item>closeCase</dgm:item>
+            <dgm:item>reopenCase</dgm:item>
+            <dgm:item>forceCloseCase</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="ApprovalProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="26" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="19" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="ApprovalProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gComponent name="VacationsRequestPhase3">
+        <dgm:body borderWidth="2" arcRad="20" X="296" Y="214" width="130" height="111">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="286" Y="207" width="150" height="127">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="VacationsRequestPhase3.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:outputPort name="VacationsRequestPhase3Rules_VacationsRequestPhase3Rules" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules#wsdl.interface(IDecisionService)" callbackInterface="http://xmlns.oracle.com/bpm/case/caseDecision/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules#wsdl.interface(IDecisionService)"/>
+        <dgm:outputPort name="ReviewRequest.service.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="ApprovalProcess.service.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/case20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="VacationsRequestPhase3Rules">
+        <dgm:body borderWidth="2" arcRad="20" X="832" Y="277" width="130" height="61">
+            <dgm:borderColor r="178" g="138" b="53"/>
+            <dgm:lightBgColor r="255" g="226" b="142"/>
+            <dgm:darkBgColor r="255" g="198" b="77"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="822" Y="270" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="VacationsRequestPhase3Rules_VacationsRequestPhase3Rules" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules#wsdl.interface(IDecisionService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/rules/plugins/resources/images/soa/decision_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ReviewRequest">
+        <dgm:body borderWidth="2" arcRad="20" X="832" Y="87" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="822" Y="80" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ApprovalProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="564" Y="169" width="130" height="136">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="554" Y="162" width="150" height="152">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="ApprovalProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ApprovalProcess#wsdl.interface(ApprovalProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.ReviewRequest.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="HumanTasks.ApproveRequest.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="Rules.VacationsRequestPhase3Rules.VacationsRequestPhase3Rules.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules#wsdl.interface(IDecisionService)"/>
+        <dgm:outputPort name="Services.Unknown.VacationsRequestPhase3.VacationsRequestPhase3Service.reference" X="120" Y="90" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ApproveRequest">
+        <dgm:body borderWidth="2" arcRad="20" X="832" Y="182" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="822" Y="175" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="VacationsRequestPhase3.service" target="VacationsRequestPhase3/VacationsRequestPhase3.service" width="2">
+        <dgm:gSegment X1="168" Y1="166" X2="192" Y2="166"/>
+        <dgm:gSegment X1="192" Y1="166" X2="192" Y2="239"/>
+        <dgm:gSegment X1="192" Y1="239" X2="286" Y2="239"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VacationsRequestPhase3/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules" target="VacationsRequestPhase3Rules/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules" width="2">
+        <dgm:gSegment X1="436" Y1="239" X2="490" Y2="239"/>
+        <dgm:gSegment X1="490" Y1="239" X2="490" Y2="333"/>
+        <dgm:gSegment X1="490" Y1="333" X2="743" Y2="333"/>
+        <dgm:gSegment X1="743" Y1="333" X2="743" Y2="302"/>
+        <dgm:gSegment X1="743" Y1="302" X2="822" Y2="302"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VacationsRequestPhase3/ReviewRequest.service.reference" target="ReviewRequest/TaskService" width="2">
+        <dgm:gSegment X1="436" Y1="264" X2="460" Y2="264"/>
+        <dgm:gSegment X1="460" Y1="264" X2="460" Y2="112"/>
+        <dgm:gSegment X1="460" Y1="112" X2="822" Y2="112"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VacationsRequestPhase3/ApprovalProcess.service.reference" target="ApprovalProcess/ApprovalProcess.service" width="2">
+        <dgm:gSegment X1="436" Y1="289" X2="475" Y2="289"/>
+        <dgm:gSegment X1="475" Y1="289" X2="475" Y2="194"/>
+        <dgm:gSegment X1="475" Y1="194" X2="554" Y2="194"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ApprovalProcess/HumanTasks.ReviewRequest.reference" target="ReviewRequest/TaskService" width="2">
+        <dgm:gSegment X1="704" Y1="194" X2="728" Y2="194"/>
+        <dgm:gSegment X1="728" Y1="194" X2="728" Y2="112"/>
+        <dgm:gSegment X1="728" Y1="112" X2="822" Y2="112"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ApprovalProcess/HumanTasks.ApproveRequest.reference" target="ApproveRequest/TaskService" width="2">
+        <dgm:gSegment X1="704" Y1="219" X2="743" Y2="219"/>
+        <dgm:gSegment X1="743" Y1="219" X2="743" Y2="207"/>
+        <dgm:gSegment X1="743" Y1="207" X2="822" Y2="207"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ApprovalProcess/Rules.VacationsRequestPhase3Rules.VacationsRequestPhase3Rules.reference" target="VacationsRequestPhase3Rules/VacationsRequestPhase3Rules_VacationsRequestPhase3Rules" width="2">
+        <dgm:gSegment X1="704" Y1="244" X2="758" Y2="244"/>
+        <dgm:gSegment X1="758" Y1="244" X2="758" Y2="302"/>
+        <dgm:gSegment X1="758" Y1="302" X2="822" Y2="302"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ApprovalProcess/Services.Unknown.VacationsRequestPhase3.VacationsRequestPhase3Service.reference" target="VacationsRequestPhase3/VacationsRequestPhase3.service" width="2">
+        <dgm:gSegment X1="704" Y1="269" X2="728" Y2="269"/>
+        <dgm:gSegment X1="728" Y1="269" X2="728" Y2="370"/>
+        <dgm:gSegment X1="728" Y1="370" X2="207" Y2="370"/>
+        <dgm:gSegment X1="207" Y1="370" X2="207" Y2="239"/>
+        <dgm:gSegment X1="207" Y1="239" X2="286" Y2="239"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ApprovalProcess.service" target="ApprovalProcess/ApprovalProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="36" X2="490" Y2="36"/>
+        <dgm:gSegment X1="490" Y1="36" X2="490" Y2="194"/>
+        <dgm:gSegment X1="490" Y1="194" X2="554" Y2="194"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

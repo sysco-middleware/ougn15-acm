@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<taskDefinition targetNamespace="http://xmlns.oracle.com/QuickStartWithCM/VacationsRequestPhase3/ApproveRequest" xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20" xmlns:ora="http://schemas.oracle.com/xpath/extension" xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc" xmlns:task="http://xmlns.oracle.com/bpel/workflow/task" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://xmlns.oracle.com/bpel/workflow/taskDefinition">
+   <name>ApproveRequest</name>
+   <id></id>
+   <title type="XPATH"/>
+   <priority>3</priority>
+   <process processId="" processVersion=""/>
+   <routingSlip routingType="TEMPLATE" xmlns="http://xmlns.oracle.com/bpel/workflow/routingSlip">
+      <participants>
+         <stage name="Stage1"/>
+      </participants>
+      <notification actionable="false">
+         <action name="ASSIGN" recipient="ASSIGNEES">
+            <![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]>
+         </action>
+         <action name="COMPLETE" recipient="CREATOR">
+            <![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]>
+         </action>
+         <action name="ERROR" recipient="OWNER">
+            <![CDATA[concat(string('Task '), /task:task/task:title, string(' requires your attention.'))]]>
+         </action>
+      </notification>
+   </routingSlip>
+   <workflowConfiguration features="ucm,RSCUSTOMIZATION" xmlns="http://xmlns.oracle.com/bpel/workflow/configuration">
+      <outcomes>
+         <outcome>APPROVE</outcome>
+         <outcome>REJECT</outcome>
+      </outcomes>
+      <payload xmlSchemaDefinition="Schemas/ApproveRequestPayload.xsd" typedTaskSchemaLocation="Schemas/ApproveRequestWorkflowTask.xsd"/>
+      <showCompleteGraphicalHistory>true</showCompleteGraphicalHistory>
+      <enableAutoClaim>true</enableAutoClaim>
+   </workflowConfiguration>
+</taskDefinition>

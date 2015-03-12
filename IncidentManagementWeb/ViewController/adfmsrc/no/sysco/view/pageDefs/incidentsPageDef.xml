@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="incidentsPageDef"
+                Package="no.sysco.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="IncidentsView1" RangeSize="25" DataControl="IncidentsModuleDataControl"
+              id="IncidentsView1Iterator" ChangeEventPolicy="ppr"/>
+    <iterator Binds="IncidentAttentionsView2" RangeSize="25" DataControl="IncidentsModuleDataControl"
+              id="IncidentAttentionsView2Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <action IterBinding="IncidentsView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="IncidentsView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="IncidentsView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="IncidentsView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="IncidentId">
+      <AttrNames>
+        <Item Value="IncidentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="EmployeeId">
+      <AttrNames>
+        <Item Value="EmployeeId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="RequestDate">
+      <AttrNames>
+        <Item Value="RequestDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="CategoryName">
+      <AttrNames>
+        <Item Value="CategoryName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="Description">
+      <AttrNames>
+        <Item Value="Description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentsView1Iterator" id="CurrentStatus">
+      <AttrNames>
+        <Item Value="CurrentStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="IncidentAttentionsView2Iterator" id="First1" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="IncidentAttentionsView2Iterator" id="Previous1" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="IncidentAttentionsView2Iterator" id="Next1" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="IncidentAttentionsView2Iterator" id="Last1" RequiresUpdateModel="true" Action="last"/>
+    <attributeValues IterBinding="IncidentAttentionsView2Iterator" id="IncidentAttentionId">
+      <AttrNames>
+        <Item Value="IncidentAttentionId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentAttentionsView2Iterator" id="IncidentId1">
+      <AttrNames>
+        <Item Value="IncidentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentAttentionsView2Iterator" id="AttentionDate">
+      <AttrNames>
+        <Item Value="AttentionDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentAttentionsView2Iterator" id="Actions">
+      <AttrNames>
+        <Item Value="Actions"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="IncidentAttentionsView2Iterator" id="Username">
+      <AttrNames>
+        <Item Value="Username"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

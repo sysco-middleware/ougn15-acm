@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf"
+                   version="1.0" name="Service Desk" id="com.company.Incidents"
+                   appControllerFolder="ApplicationController" listener-class="application.LifeCycleListenerImpl"
+                   vendor="SYSCO AS">
+  <adfmf:featureReference refId="Incident" id="fr1"/>
+  <adfmf:preferences/>
+  <adfmf:navigation>
+    <adfmf:navigationBar enabled="false"/>
+  </adfmf:navigation>
+</adfmf:application>

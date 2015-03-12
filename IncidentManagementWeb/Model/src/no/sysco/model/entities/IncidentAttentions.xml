@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="IncidentAttentions"
+  Version="12.1.3.13.52"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="INCIDENT_ATTENTIONS"
+  AliasName="IncidentAttentions"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="IncidentAttentionId"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="INCIDENT_ATTENTION_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="INCIDENT_ATTENTIONS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="IncidentId"
+    IsNotNull="true"
+    Precision="6"
+    Scale="0"
+    ColumnName="INCIDENT_ID"
+    SQLType="NUMERIC"
+    Type="java.lang.Integer"
+    ColumnType="NUMBER"
+    TableName="INCIDENT_ATTENTIONS"/>
+  <Attribute
+    Name="AttentionDate"
+    IsNotNull="true"
+    ColumnName="ATTENTION_DATE"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="INCIDENT_ATTENTIONS"/>
+  <Attribute
+    Name="Actions"
+    Precision="500"
+    ColumnName="ACTIONS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INCIDENT_ATTENTIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Username"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="USERNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="INCIDENT_ATTENTIONS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="Incidents"
+    Association="no.sysco.model.entities.IncIncAttFkAssoc"
+    AssociationEnd="no.sysco.model.entities.IncIncAttFkAssoc.Incidents"
+    AssociationOtherEnd="no.sysco.model.entities.IncIncAttFkAssoc.IncidentAttentions"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="IncidentAttentionPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="INCIDENT_ATTENTION_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="no.sysco.model.entities.IncidentAttentions.IncidentAttentionId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="IncIncAttFk">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="INCIDENT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="INC_INC_ATT_FK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="no.sysco.model.entities.IncidentAttentions.IncidentId"/>
+    </AttrArray>
+  </Key>
+</Entity>

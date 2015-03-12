@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ArtifactApp</groupId>
+    <artifactId>Database</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <description>Database artifacts</description>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <flyway.user>HCM</flyway.user>
+        <flyway.password>hcm</flyway.password>
+        <flyway.url>jdbc:oracle:thin:@ougn15-acm:1521:XE</flyway.url>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>3.1</version>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>Maven Central</id>
+            <name>Maven Central</name>
+            <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>Oracle-JDBC</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

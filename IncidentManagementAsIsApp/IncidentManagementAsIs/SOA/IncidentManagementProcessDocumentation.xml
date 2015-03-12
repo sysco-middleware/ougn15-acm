@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="IncidentManagementProcess">
+      <topicDocumentations>
+         <topicDocumentation name="IncidentManagementProcess"/>
+         <topicDocumentation name="ACT12339009232273">
+            <labels>
+               <label locale="en">Incident Identification</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339038041611">
+            <labels>
+               <label locale="en">Incident Categorization</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339056843135">
+            <labels>
+               <label locale="en">Major Incident procedure</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT12339057056223">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT12339057056244">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf12339057056298"/>
+         <topicDocumentation name="ACT12339061891764">
+            <labels>
+               <label locale="en">Initial Diagnostic</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339075582661">
+            <labels>
+               <label locale="en">Investigation</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339082689878">
+            <labels>
+               <label locale="en">Incident Escalation</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339096672012">
+            <labels>
+               <label locale="en">Resolution and recovery</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT12339103957024">
+            <labels>
+               <label locale="en">IncidentClosure</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1233895839656">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT12338958396514">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT12339012855552">
+            <labels>
+               <label locale="en">Not an Incident</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW12339015043452">
+            <labels>
+               <label locale="en">Is really an Incident?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW12339048465494">
+            <labels>
+               <label locale="en">Is a major Incident?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW1233906818069">
+            <labels>
+               <label locale="en">Escalation needed?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW12339091237990">
+            <labels>
+               <label locale="en">Resolution Identified?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf12338958396561"/>
+         <topicDocumentation name="sf12339014561679"/>
+         <topicDocumentation name="sf12339016238856"/>
+         <topicDocumentation name="sf12339039393279"/>
+         <topicDocumentation name="sf12339051762980"/>
+         <topicDocumentation name="sf12339060433331"/>
+         <topicDocumentation name="sf12339063890214"/>
+         <topicDocumentation name="sf12339066436338"/>
+         <topicDocumentation name="sf12339070756667"/>
+         <topicDocumentation name="sf12339077565813"/>
+         <topicDocumentation name="sf12339085233635"/>
+         <topicDocumentation name="sf12339087389952"/>
+         <topicDocumentation name="sf12339092611650"/>
+         <topicDocumentation name="sf12339093128266"/>
+         <topicDocumentation name="sf12339098857526"/>
+         <topicDocumentation name="sf12339106385654"/>
+         <topicDocumentation name="sf12339107044290"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

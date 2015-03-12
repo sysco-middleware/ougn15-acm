@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.13.52" id="DataControls"
+                    Package="escalateincidenttask">
+  <AdapterDataControl id="EscalateIncidentTask_EscalateIncident"
+                      FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.bpel.services.datacontrol.XSDDataControlDefinition" SupportsTransactions="true"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="false"
+                      Definition="EscalateIncidentTask_EscalateIncident"
+                      BeanClass="EscalateIncidentTask_EscalateIncident"
+                      xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <XSDDataControl xmlns="http://xmlns.oracle.com/bpel/workflow/task"
+                      SchemaLocation="file:/C:/Users/JorgeEsteban/dev/sysco/labs/lab-ougn15-acm/IncidentManagementApp/IncidentManagementProcess/SOA/Schemas/EscalateIncidentWorkflowTask.xsd"
+                      RootElement="task" rootelementnamespace="http://xmlns.oracle.com/bpel/workflow/task"
+                      taskLoc="../IncidentManagementProcess/SOA/HumanTasks/EscalateIncident.task" InitiationTask="false"
+                      DocumentStoreConfiguration="false"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

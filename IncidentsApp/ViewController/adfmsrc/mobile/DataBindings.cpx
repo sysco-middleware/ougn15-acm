@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.13.52" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Incident/ListIncidents.amx" usageId="mobile_ListIncidentsPageDef"/>
+    <page path="/Incident/CreateIncident.amx" usageId="mobile_CreateIncidentPageDef"/>
+    <page path="/Incident/login.amx" usageId="mobile_loginPageDef"/>
+    <page path="/Incident/Detail.amx" usageId="mobile_DetailPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_ListIncidentsPageDef" path="Incident.ListIncidentsPageDef"/>
+    <page id="mobile_CreateIncidentPageDef" path="Incident.CreateIncidentPageDef"/>
+    <page id="mobile_loginPageDef" path="Incident.loginPageDef"/>
+    <page id="mobile_DetailPageDef" path="Incident.DetailPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="DeviceFeatures" path="application.DeviceFeatures"/>
+    <dc id="IncidentManagerDC" path="application.IncidentManagerDC"/>
+  </dataControlUsages>
+</Application>

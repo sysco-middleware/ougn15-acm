@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<?bpmCaseRelPath IncidentManagementProcess/SOA/case/IncidentManagementProcess.case?>
+<?bpmCaseName IncidentManagementProcess?>
+<?bpmCaseDataObjName incident?>
+<?bpmProject IncidentManagementProcess?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="incident">
+    <default-activity>loadIncident</default-activity>
+    <data-control-scope>
+      <isolated/>
+    </data-control-scope>
+    <input-parameter-definition id="__1">
+      <name>bpmWorklistContext</name>
+      <value>#{pageFlowScope.bpmWorklistContext}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__2">
+      <name>objId</name>
+      <value>#{pageFlowScope.objId}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__3">
+      <name>bpmClientType</name>
+      <value>#{pageFlowScope.bpmClientType}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__4">
+      <name>locale</name>
+      <value>#{pageFlowScope.locale}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__5">
+      <name>tz</name>
+      <value>#{pageFlowScope.tz}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__6">
+      <name>dateTimePattern</name>
+      <value>#{pageFlowScope.dateTimePattern}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__7">
+      <name>datePattern</name>
+      <value>#{pageFlowScope.datePattern}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__8">
+      <name>timePattern</name>
+      <value>#{pageFlowScope.timePattern}</value>
+      <class></class>
+    </input-parameter-definition>
+    <input-parameter-definition id="__9">
+      <name>caKey</name>
+      <value>#{pageFlowScope.caKey}</value>
+      <class></class>
+    </input-parameter-definition>
+    <view id="incident_jspx">
+      <page>/IncidentManagementProcess/IncidentManagementProcess/data/view/incident.jspx</page>
+    </view>
+    <task-flow-return id="save">
+      <outcome>
+        <name>save</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="reset">
+      <outcome>
+        <name>reset</name>
+      </outcome>
+    </task-flow-return>
+    <method-call id="loadIncident">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome>
+        <fixed-outcome>ExecuteWithParams</fixed-outcome>
+      </outcome>
+    </method-call>
+    <control-flow-rule id="__10">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__11">
+        <from-outcome>save</from-outcome>
+        <to-activity-id>save</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__12">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__13">
+        <from-outcome>reset</from-outcome>
+        <to-activity-id>reset</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__14">
+      <from-activity-id>loadIncident</from-activity-id>
+      <control-flow-case id="__15">
+        <to-activity-id>incident_jspx</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility>
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

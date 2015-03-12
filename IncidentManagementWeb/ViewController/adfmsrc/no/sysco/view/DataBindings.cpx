@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.13.52" id="DataBindings"
+             SeparateXMLFiles="false" Package="no.sysco.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/WEB-INF/incidents-task-flow.xml#incidents-task-flow@getIncident"
+          usageId="no_sysco_view_incidents_task_flow_incidents_task_flow_getIncidentPageDef"/>
+    <page path="/WEB-INF/incident.jsff" usageId="no_sysco_view_incidentPageDef"/>
+    <page path="/testIncidents.jspx" usageId="no_sysco_view_testIncidentsPageDef1"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="no_sysco_view_incidents_task_flow_incidents_task_flow_getIncidentPageDef"
+          path="no.sysco.view.pageDefs.incidents_task_flow_incidents_task_flow_getIncidentPageDef"/>
+    <page id="no_sysco_view_incidentPageDef" path="no.sysco.view.pageDefs.incidentPageDef"/>
+    <page id="no_sysco_view_testIncidentsPageDef1" path="no.sysco.view.pageDefs.testIncidentsPageDef1"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="IncidentsModuleDataControl" Package="no.sysco.model.modules"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="IncidentsModuleShared" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

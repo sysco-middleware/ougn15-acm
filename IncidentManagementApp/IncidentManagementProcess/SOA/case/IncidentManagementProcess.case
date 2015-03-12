@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:caseMetadata targetNamespace="http://xmlns.oracle.com/IncidentManagementProcess" xmlns:ns2="http://xmlns.oracle.com/bpm/case/metadata" xmlns="http://xmlns.oracle.com/bpm/case/metadata/extension" xmlns:ns4="http://xmlns.oracle.com/bpm/case/activity" xmlns:ns3="http://xmlns.oracle.com/bpm/case/metadata/common">
+    <ns2:id>${domain_id}_${process_id}_${process_revision}_IncidentManagementProcess</ns2:id>
+    <ns2:name>IncidentManagementProcess</ns2:name>
+    <ns2:title translationType="STATIC">
+        <ns3:translationValue>Incident Management Process</ns3:translationValue>
+    </ns2:title>
+    <ns2:longSummary translationType="STATIC">
+        <ns3:translationValue>The aim is control the Incident lifecycle and offer an efective solution to our users.</ns3:translationValue>
+    </ns2:longSummary>
+    <ns2:priority>3</ns2:priority>
+    <ns2:category>
+        <ns2:name translationType="STATIC">
+            <ns3:translationValue>Service Desk</ns3:translationValue>
+        </ns2:name>
+    </ns2:category>
+    <ns2:ecmFolder>
+        <ns2:parentFolder type="STATIC">/Service Desk/Incidents</ns2:parentFolder>
+        <ns2:caseInstanceFolder type="XPATH">$incident/ns1:Incident/ns1:incidentId</ns2:caseInstanceFolder>
+        <ns2:createSubFolderOnCaseInstanceCreation>true</ns2:createSubFolderOnCaseInstanceCreation>
+    </ns2:ecmFolder>
+    <ns2:caseData>
+        <ns2:data updatable="true" external="false">
+            <ns2:name>incident</ns2:name>
+            <ns2:type>{http://xmlns.oracle.com/bpm/bpmobject/Data/Incident}Incident</ns2:type>
+            <ns2:dataType>ELEMENT</ns2:dataType>
+            <ns2:schema>businessCatalog/Data/Incident.xsd</ns2:schema>
+        </ns2:data>
+    </ns2:caseData>
+    <ns2:events>
+        <ns2:userDefinedEvent>UserUpdate</ns2:userDefinedEvent>
+        <ns2:userDefinedEvent>IncidentCancellation</ns2:userDefinedEvent>
+    </ns2:events>
+    <ns2:publishCaseEventsToEDN>true</ns2:publishCaseEventsToEDN>
+    <ns2:stakeHolders>
+        <ns2:stakeHolder>
+            <ns2:name>ServiceDesk</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">weblogic</ns2:resource>
+        </ns2:stakeHolder>
+    </ns2:stakeHolders>
+    <ns2:milestones>
+        <ns2:milestone>
+            <ns2:name>Received</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+            <ns2:deadline>
+                <ns2:duration type="STATIC"></ns2:duration>
+            </ns2:deadline>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Classified</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+            <ns2:deadline>
+                <ns2:duration type="STATIC"></ns2:duration>
+            </ns2:deadline>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Attended</ns2:name>
+            <ns2:isSoft>true</ns2:isSoft>
+            <ns2:deadline>
+                <ns2:duration type="STATIC"></ns2:duration>
+            </ns2:deadline>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Closed</ns2:name>
+            <ns2:isSoft>true</ns2:isSoft>
+            <ns2:deadline>
+                <ns2:duration type="STATIC"></ns2:duration>
+            </ns2:deadline>
+        </ns2:milestone>
+    </ns2:milestones>
+    <ns2:outcomes>
+        <ns2:outcome>
+            <ns2:name>Resolved</ns2:name>
+        </ns2:outcome>
+        <ns2:outcome>
+            <ns2:name>NotResolved</ns2:name>
+        </ns2:outcome>
+    </ns2:outcomes>
+    <ns2:permissionTags>
+        <ns2:permissionTag>
+            <ns2:customTagName>PUBLIC</ns2:customTagName>
+        </ns2:permissionTag>
+        <ns2:permissionTag>
+            <ns2:customTagName>RESTRICTED</ns2:customTagName>
+        </ns2:permissionTag>
+    </ns2:permissionTags>
+    <ns2:resourceBundle>
+        <ns2:name>IncidentManagementProcessResourceBundle</ns2:name>
+    </ns2:resourceBundle>
+    <ns2:namespacePrefixes>
+        <ns2:namespacePrefix>
+            <ns2:prefix>bpmo</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpm/bpmobject/</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>common</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpm/case/metadata/common</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>oraext</ns2:prefix>
+            <ns2:namespace>http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>xjc</ns2:prefix>
+            <ns2:namespace>http://java.sun.com/xml/ns/jaxb/xjc</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>bpm</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpmn20/extensions</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>dvm</ns2:prefix>
+            <ns2:namespace>http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>extension</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpm/case/metadata/extension</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>ns1</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpm/bpmobject/Data/Incident</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>xp20</ns2:prefix>
+            <ns2:namespace>http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>ora</ns2:prefix>
+            <ns2:namespace>http://schemas.oracle.com/xpath/extension</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>tns</ns2:prefix>
+            <ns2:namespace>http://xmlns.oracle.com/bpm/case</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>ns0</ns2:prefix>
+            <ns2:namespace>http://www.w3.org/2001/XMLSchema</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>xref</ns2:prefix>
+            <ns2:namespace>http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>jaxb</ns2:prefix>
+            <ns2:namespace>http://java.sun.com/xml/ns/jaxb</ns2:namespace>
+        </ns2:namespacePrefix>
+        <ns2:namespacePrefix>
+            <ns2:prefix>xsi</ns2:prefix>
+            <ns2:namespace>http://www.w3.org/2001/XMLSchema-instance</ns2:namespace>
+        </ns2:namespacePrefix>
+    </ns2:namespacePrefixes>
+    <ns2:organizationalUnitName type="STATIC">SERVICE DESK</ns2:organizationalUnitName>
+    <ns2:dueDate>
+        <ns2:duration type="STATIC"></ns2:duration>
+    </ns2:dueDate>
+    <ns2:useBusinessCalendar>false</ns2:useBusinessCalendar>
+</ns2:caseMetadata>

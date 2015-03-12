@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="root_descriptor_alias">INCIDENTS</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ID:db_column_type">NUMBER</entry>
+   <entry key="INCIDENTS.REQUEST_DATE:db_column_scale">6</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ID:db_column_not_null">true</entry>
+   <entry key="INCIDENT_ATTENTIONS.USERNAME:db_column_size">50</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ATTENTION_ID:db_column_type">NUMBER</entry>
+   <entry key="INCIDENTS:db_column_5">CURRENT_STATUS</entry>
+   <entry key="INCIDENT_ATTENTIONS.ACTIONS:db_column_type">VARCHAR2</entry>
+   <entry key="INCIDENTS:db_column_4">DESCRIPTION</entry>
+   <entry key="INCIDENTS:db_column_3">CATEGORY_NAME</entry>
+   <entry key="INCIDENTS.CURRENT_STATUS:db_column_size">20</entry>
+   <entry key="INCIDENTS:db_column_2">REQUEST_DATE</entry>
+   <entry key="INCIDENTS:db_column_1">EMPLOYEE_ID</entry>
+   <entry key="INCIDENTS.CATEGORY_NAME:db_column_type">VARCHAR2</entry>
+   <entry key="INCIDENTS:db_column_0">INCIDENT_ID</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ATTENTION_ID:db_column_precision">6</entry>
+   <entry key="INCIDENT_ATTENTIONS.ATTENTION_DATE:db_column_type">TIMESTAMP</entry>
+   <entry key="INCIDENT_ATTENTIONS.ACTIONS:db_column_size">500</entry>
+   <entry key="INCIDENTS.DESCRIPTION:db_column_not_null">false</entry>
+   <entry key="INCIDENTS.INCIDENT_ID:db_column_scale">0</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ATTENTION_ID:db_column_scale">0</entry>
+   <entry key="INCIDENTS.REQUEST_DATE:db_column_type">TIMESTAMP</entry>
+   <entry key="INCIDENTS.CATEGORY_NAME:db_column_size">100</entry>
+   <entry key="INCIDENTS.CURRENT_STATUS:db_column_not_null">true</entry>
+   <entry key="INCIDENTS.EMPLOYEE_ID:db_column_not_null">true</entry>
+   <entry key="INCIDENTS.REQUEST_DATE:db_column_not_null">true</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ID:db_column_scale">0</entry>
+   <entry key="INCIDENTS.INCIDENT_ID:db_column_precision">6</entry>
+   <entry key="INCIDENTS.DESCRIPTION:db_column_type">VARCHAR2</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_table_type">TABLE</entry>
+   <entry key="INCIDENT_ATTENTIONS.USERNAME:db_column_not_null">true</entry>
+   <entry key="INCIDENT_ATTENTIONS.ACTIONS:db_column_not_null">false</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ATTENTION_ID:db_column_not_null">true</entry>
+   <entry key="INCIDENT_ATTENTIONS.ATTENTION_DATE:db_column_not_null">true</entry>
+   <entry key="INCIDENTS.EMPLOYEE_ID:db_column_precision">6</entry>
+   <entry key="INCIDENTS.DESCRIPTION:db_column_size">500</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_column_4">USERNAME</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_column_3">ACTIONS</entry>
+   <entry key="return_single_result_set">false</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_column_2">ATTENTION_DATE</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_column_1">INCIDENT_ID</entry>
+   <entry key="INCIDENT_ATTENTIONS:db_column_0">INCIDENT_ATTENTION_ID</entry>
+   <entry key="INCIDENTS.EMPLOYEE_ID:db_column_scale">0</entry>
+   <entry key="INCIDENTS.EMPLOYEE_ID:db_column_type">NUMBER</entry>
+   <entry key="INCIDENTS.INCIDENT_ID:db_column_not_null">true</entry>
+   <entry key="INCIDENTS.INCIDENT_ID:db_column_type">NUMBER</entry>
+   <entry key="INCIDENT_ATTENTIONS.INCIDENT_ID:db_column_precision">6</entry>
+   <entry key="INCIDENT_ATTENTIONS.ATTENTION_DATE:db_column_scale">6</entry>
+   <entry key="INCIDENT_ATTENTIONS.USERNAME:db_column_type">VARCHAR2</entry>
+   <entry key="INCIDENTS.CATEGORY_NAME:db_column_not_null">false</entry>
+   <entry key="INCIDENTS.CURRENT_STATUS:db_column_type">VARCHAR2</entry>
+   <entry key="INCIDENTS:db_table_type">TABLE</entry>
+</properties>

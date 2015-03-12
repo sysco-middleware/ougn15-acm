@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseTaskFlows xmlns="http://xmlns.oracle.com/bpel/workflow/CaseTFProperties">
+   <ApplicationName>worklist</ApplicationName>
+   <CaseTaskFlowDeploy>false</CaseTaskFlowDeploy>
+   <CaseTaskFlow>
+      <CaseName>IncidentManagementProcess</CaseName>
+      <CaseItemName>incident</CaseItemName>
+      <CaseDefinitionNamespace>http://xmlns.oracle.com/IncidentManagementProcess</CaseDefinitionNamespace>
+      <TaskFlowId>incident</TaskFlowId>
+      <TaskFlowFileName>IncidentManagementProcess/IncidentManagementProcess/data/tf/incident.xml</TaskFlowFileName>
+   </CaseTaskFlow>
+</CaseTaskFlows>

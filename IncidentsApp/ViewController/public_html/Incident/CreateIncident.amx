@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+    <amx:facet name="header">
+      <amx:outputText value="New Incident" id="ot1"/>
+    </amx:facet>
+    <amx:facet name="primary">
+      <amx:commandButton id="cb1" text="back" action="__back"/>
+    </amx:facet>
+    <amx:facet name="secondary">
+      <amx:commandButton id="cb2" text="Send" action="back" actionListener="#{bindings.createIncident.execute}"/>
+    </amx:facet>
+    <amx:panelFormLayout id="pfl1">
+      <amx:inputText value="#{bindings.employee_id.inputValue}" label="employee id" id="it3"
+                     readOnly="true"/>
+      <amx:inputDate value="#{bindings.date.inputValue}" label="#{bindings.date.hints.label}" id="id1"/>
+      <!--<amx:inputText value="#{bindings.category_name.inputValue}" label="#{bindings.category_name.hints.label}"
+                     id="it1"/>-->
+      <amx:selectOneChoice value="#{bindings.categories.inputValue}" label="#{bindings.categories.label}" id="soc1">
+        <amx:selectItems value="#{bindings.categories.items}" id="si1"/>
+      </amx:selectOneChoice>
+      
+      <amx:inputText value="#{bindings.description.inputValue}" label="#{bindings.description.hints.label}" id="it4"/>
+    </amx:panelFormLayout>
+    <amx:panelGroupLayout id="pgl1" halign="center" valign="middle">
+      <amx:image id="i1" source="#{bindings.imagePhoto.inputValue}"
+                 
+                 rendered="#{(bindings.imagePhoto.inputValue=='')?false:true}"/>
+      <!--<amx:commandButton actionListener="#{bindings.getPicture.execute}" text="take Photo"
+                         disabled="#{!bindings.getPicture.enabled}" id="cb3"/>-->
+                         
+      <amx:commandButton actionListener="#{bindings.getPicture1.execute}" text="Take Picture"
+                         disabled="#{!bindings.getPicture1.enabled}" id="cb4"/>
+      
+    </amx:panelGroupLayout>
+  </amx:panelPage>
+</amx:view>

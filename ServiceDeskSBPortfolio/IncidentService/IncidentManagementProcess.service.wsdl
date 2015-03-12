@@ -1,0 +1,235 @@
+<definitions name="CaseService" targetNamespace="http://xmlns.oracle.com/CaseService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:svc="http://xmlns.oracle.com/CaseService/types" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:tns="http://xmlns.oracle.com/CaseService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:java="http://schemas.xmlsoap.org/wsdl/java/" xmlns:caseInstance="http://xmlns.oracle.com/CaseInstance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:format="http://schemas.xmlsoap.org/wsdl/formatbinding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+    <abstractWSDL>http://ougn15-acm:7011/soa-infra/services/default/IncidentManagementProcess!1.0/soa/shared/casemgmt/CaseService.wsdl</abstractWSDL>
+  </documentation>
+  <plnk:partnerLinkType name="CaseServicePartnerLink">
+    <plnk:role name="CaseServiceProvider">
+      <plnk:portType name="tns:CaseServicePortType"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <types>
+    <xsd:schema targetNamespace="http://xmlns.oracle.com/CaseService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://xmlns.oracle.com/CaseService/types" schemaLocation="IncidentManagementProcess.serviceCaseService.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="startCaseInputMessage">
+    <part name="payload" element="svc:startCaseInputMessage"/>
+  </message>
+  <message name="startCaseOutputMessage">
+    <part name="payload" element="svc:startCaseOutputMessage"/>
+  </message>
+  <message name="caseServiceFaultMessage">
+    <part name="fault" element="svc:caseServiceFaultMessage"/>
+  </message>
+  <message name="attainMilestoneInputMessage">
+    <part name="payload" element="svc:attainMilestoneInputMessage"/>
+  </message>
+  <message name="attainMilestoneOutputMessage">
+    <part name="payload" element="svc:attainMilestoneOutputMessage"/>
+  </message>
+  <message name="revokeMilestoneInputMessage">
+    <part name="payload" element="svc:revokeMilestoneInputMessage"/>
+  </message>
+  <message name="revokeMilestoneOutputMessage">
+    <part name="payload" element="svc:revokeMilestoneOutputMessage"/>
+  </message>
+  <message name="abortCaseInputMessage">
+    <part name="payload" element="svc:abortCaseInputMessage"/>
+  </message>
+  <message name="abortCaseOutputMessage">
+    <part name="payload" element="svc:abortCaseOutputMessage"/>
+  </message>
+  <message name="suspendCaseInputMessage">
+    <part name="payload" element="svc:suspendCaseInputMessage"/>
+  </message>
+  <message name="suspendCaseOutputMessage">
+    <part name="payload" element="svc:suspendCaseOutputMessage"/>
+  </message>
+  <message name="resumeCaseInputMessage">
+    <part name="payload" element="svc:resumeCaseInputMessage"/>
+  </message>
+  <message name="resumeCaseOutputMessage">
+    <part name="payload" element="svc:resumeCaseOutputMessage"/>
+  </message>
+  <message name="closeCaseInputMessage">
+    <part name="payload" element="svc:closeCaseInputMessage"/>
+  </message>
+  <message name="closeCaseOutputMessage">
+    <part name="payload" element="svc:closeCaseOutputMessage"/>
+  </message>
+  <message name="reopenCaseInputMessage">
+    <part name="payload" element="svc:reopenCaseInputMessage"/>
+  </message>
+  <message name="reopenCaseOutputMessage">
+    <part name="payload" element="svc:reopenCaseOutputMessage"/>
+  </message>
+  <message name="forceCloseCaseInputMessage">
+    <part name="payload" element="svc:forceCloseCaseInputMessage"/>
+  </message>
+  <message name="forceCloseCaseOutputMessage">
+    <part name="payload" element="svc:forceCloseCaseOutputMessage"/>
+  </message>
+  <portType name="CaseServicePortType">
+    <operation name="startCase">
+      <input name="startCaseInput" message="tns:startCaseInputMessage"/>
+      <output name="startCaseOutput" message="tns:startCaseOutputMessage"/>
+      <fault name="startCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="attainMilestone">
+      <input name="attainMilestoneInput" message="tns:attainMilestoneInputMessage"/>
+      <output name="attainMilestoneOutput" message="tns:attainMilestoneOutputMessage"/>
+      <fault name="attainMilestoneFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="revokeMilestone">
+      <input name="revokeMilestoneInput" message="tns:revokeMilestoneInputMessage"/>
+      <output name="revokeMilestoneOutput" message="tns:revokeMilestoneOutputMessage"/>
+      <fault name="revokeMilestoneFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="abortCase">
+      <input name="abortCaseInput" message="tns:abortCaseInputMessage"/>
+      <output name="abortCaseOutput" message="tns:abortCaseOutputMessage"/>
+      <fault name="abortCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="suspendCase">
+      <input name="suspendCaseInput" message="tns:suspendCaseInputMessage"/>
+      <output name="suspendCaseOutput" message="tns:suspendCaseOutputMessage"/>
+      <fault name="suspendCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="resumeCase">
+      <input name="resumeCaseInput" message="tns:resumeCaseInputMessage"/>
+      <output name="resumeCaseOutput" message="tns:resumeCaseOutputMessage"/>
+      <fault name="resumeCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="closeCase">
+      <input name="closeCaseInput" message="tns:closeCaseInputMessage"/>
+      <output name="closeCaseOutput" message="tns:closeCaseOutputMessage"/>
+      <fault name="closeCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="reopenCase">
+      <input name="reopenCaseInput" message="tns:reopenCaseInputMessage"/>
+      <output name="reopenCaseOutput" message="tns:reopenCaseOutputMessage"/>
+      <fault name="reopenCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+    <operation name="forceCloseCase">
+      <input name="forceCloseCaseInput" message="tns:forceCloseCaseInputMessage"/>
+      <output name="forceCloseCaseOutput" message="tns:forceCloseCaseOutputMessage"/>
+      <fault name="forceCloseCaseFault" message="tns:caseServiceFaultMessage"/>
+    </operation>
+  </portType>
+  <binding name="CaseServiceBinding" type="tns:CaseServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="startCase">
+      <soap:operation style="document" soapAction="startCase"/>
+      <input name="startCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="startCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="startCaseFault">
+        <soap:fault name="startCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="attainMilestone">
+      <soap:operation style="document" soapAction="attainMilestone"/>
+      <input name="attainMilestoneInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="attainMilestoneOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="attainMilestoneFault">
+        <soap:fault name="attainMilestoneFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="revokeMilestone">
+      <soap:operation style="document" soapAction="revokeMilestone"/>
+      <input name="revokeMilestoneInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="revokeMilestoneOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="revokeMilestoneFault">
+        <soap:fault name="revokeMilestoneFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="abortCase">
+      <soap:operation style="document" soapAction="abortCase"/>
+      <input name="abortCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="abortCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="abortCaseFault">
+        <soap:fault name="abortCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="suspendCase">
+      <soap:operation style="document" soapAction="suspendCase"/>
+      <input name="suspendCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="suspendCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="suspendCaseFault">
+        <soap:fault name="suspendCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="resumeCase">
+      <soap:operation style="document" soapAction="resumeCase"/>
+      <input name="resumeCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="resumeCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="resumeCaseFault">
+        <soap:fault name="resumeCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="closeCase">
+      <soap:operation style="document" soapAction="closeCase"/>
+      <input name="closeCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="closeCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="closeCaseFault">
+        <soap:fault name="closeCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="reopenCase">
+      <soap:operation style="document" soapAction="reopenCase"/>
+      <input name="reopenCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="reopenCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="reopenCaseFault">
+        <soap:fault name="reopenCaseFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="forceCloseCase">
+      <soap:operation style="document" soapAction="forceCloseCase"/>
+      <input name="forceCloseCaseInput">
+        <soap:body use="literal"/>
+      </input>
+      <output name="forceCloseCaseOutput">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="forceCloseCaseFault">
+        <soap:fault name="forceCloseCaseFault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="IncidentManagementProcess.service">
+    <port name="CaseServicePort" binding="tns:CaseServiceBinding">
+      <soap:address location="http://ougn15-acm:7011/soa-infra/services/default/IncidentManagementProcess/IncidentManagementProcess.service"/>
+    </port>
+  </service>
+</definitions>

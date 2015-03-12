@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xs:schema targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/IncidentsDB" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/IncidentsDB" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <xs:element name="IncidentsCollection" type="IncidentsCollection"/>
+   <xs:element name="Incidents" type="Incidents"/>
+   <xs:complexType name="IncidentsCollection">
+      <xs:sequence>
+         <xs:element name="Incidents" type="Incidents" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="Incidents">
+      <xs:sequence>
+         <xs:element name="incidentId" type="xs:int" nillable="true"/>
+         <xs:element name="employeeId" type="xs:int" minOccurs="0"/>
+         <xs:element name="requestDate" type="xs:dateTime" minOccurs="0"/>
+         <xs:element name="categoryName" type="string100" minOccurs="0" nillable="true"/>
+         <xs:element name="description" type="string500" minOccurs="0" nillable="true"/>
+         <xs:element name="currentStatus" type="string20" minOccurs="0"/>
+         <xs:element name="incidentAttentionsCollection" minOccurs="0">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element name="IncidentAttentions" type="IncidentAttentions" minOccurs="0" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="IncidentAttentions">
+      <xs:sequence>
+         <xs:element name="incidentAttentionId" type="xs:int"/>
+         <xs:element name="attentionDate" type="xs:dateTime" minOccurs="0"/>
+         <xs:element name="actions" type="string500" minOccurs="0" nillable="true"/>
+         <xs:element name="username" type="string50" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="IncidentsDBSelectInputParameters" type="IncidentsDBSelect"/>
+   <xs:complexType name="IncidentsDBSelect">
+      <xs:sequence/>
+   </xs:complexType>
+   <xs:element name="IncidentsPrimaryKey" type="IncidentsPrimaryKey"/>
+   <xs:complexType name="IncidentsPrimaryKey">
+      <xs:sequence>
+         <xs:element name="incidentId" type="xs:int" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="string100">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="100"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="string500">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="500"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="string20">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="20"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="string50">
+      <xs:restriction base="xs:string">
+         <xs:maxLength value="50"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

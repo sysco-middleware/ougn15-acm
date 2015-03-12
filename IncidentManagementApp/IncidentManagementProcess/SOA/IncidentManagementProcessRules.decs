@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="IncidentManagementProcessRules">
+    <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="myRuleEngine">
+        <repository type="SCA-Archive">
+            <path>IncidentManagementProcess/oracle/rules/IncidentManagementProcessRules.rules</path>
+        </repository>
+    </ruleEngineProvider>
+    <decisionService name="IncidentManagementProcessRules_IncidentManagementProcessRules" ruleEngineProviderReference="myRuleEngine" targetNamespace="http://xmlns.oracle.com/bpm/case/caseDecision/IncidentManagementProcessRules_IncidentManagementProcessRules">
+        <catalog>IncidentManagementProcessRules</catalog>
+        <pattern name="CallFunctionStateless">
+            <arguments>
+                <call>IncidentManagementProcessRules.IncidentManagementProcessRules</call>
+            </arguments>
+        </pattern>
+        <pattern name="CallFunctionStateful">
+            <arguments>
+                <call>IncidentManagementProcessRules.IncidentManagementProcessRules</call>
+            </arguments>
+        </pattern>
+    </decisionService>
+    <schemaInformation>
+        <dictionary fqnPackage="oracle.bpm.casemgmt.caserule" fqnName="CaseManagementBaseDictionary" updateNumber="3">
+            <schemaBrowser>
+                <package>oracle.bpm.casemgmt.metadata.caseinstance.model</package>
+                <namespace>http://xmlns.oracle.com/bpm/case</namespace>
+            </schemaBrowser>
+            <schemaBrowser>
+                <package>oracle.bpm.casemgmt.metadata.event.model</package>
+                <namespace>http://xmlns.oracle.com/bpm/case/event</namespace>
+            </schemaBrowser>
+            <schemaBrowser>
+                <package>oracle.bpm.casemgmt.caserule.model</package>
+                <namespace>http://xmlns.oracle.com/bpm/case/action</namespace>
+            </schemaBrowser>
+            <schemaImport namespace="http://xmlns.oracle.com/bpm/case" localPart="Case.xsd" schemaLocation="oramds:/soa/shared/casemgmt/Case.xsd" package="oracle.bpm.casemgmt.metadata.caseinstance.model">
+                <import namespace="http://xmlns.oracle.com/bpm/case" localPart="Case.xsd" schemaLocation="oramds:/soa/shared/casemgmt/Case.xsd"/>
+                <import namespace="http://xmlns.oracle.com/bpm/case/metadata/common" localPart="CaseMetadataCommon.xsd" schemaLocation="oramds:/soa/shared/casemgmt/CaseMetadataCommon.xsd"/>
+                <import namespace="http://xmlns.oracle.com/bpm/case/metadata/extension" localPart="ExtensibleElements.xsd" schemaLocation="oramds:/soa/shared/casemgmt/ExtensibleElements.xsd"/>
+            </schemaImport>
+            <schemaImport namespace="http://xmlns.oracle.com/bpm/case/event" localPart="CaseEvent.xsd" schemaLocation="oramds:/soa/shared/casemgmt/CaseEvent.xsd" package="oracle.bpm.casemgmt.metadata.event.model">
+                <import namespace="http://xmlns.oracle.com/bpm/case/event" localPart="CaseEvent.xsd" schemaLocation="oramds:/soa/shared/casemgmt/CaseEvent.xsd"/>
+                <import namespace="http://xmlns.oracle.com/bpm/case/metadata/extension" localPart="ExtensibleElements.xsd" schemaLocation="oramds:/soa/shared/casemgmt/ExtensibleElements.xsd"/>
+            </schemaImport>
+            <schemaImport namespace="http://xmlns.oracle.com/bpm/case/action" localPart="CaseAction.xsd" schemaLocation="oramds:/soa/shared/casemgmt/CaseAction.xsd" package="oracle.bpm.casemgmt.caserule.model">
+                <import namespace="http://xmlns.oracle.com/bpm/case/action" localPart="CaseAction.xsd" schemaLocation="oramds:/soa/shared/casemgmt/CaseAction.xsd"/>
+                <import namespace="http://xmlns.oracle.com/bpm/case/metadata/extension" localPart="ExtensibleElements.xsd" schemaLocation="oramds:/soa/shared/casemgmt/ExtensibleElements.xsd"/>
+            </schemaImport>
+        </dictionary>
+        <dictionary fqnPackage="" fqnName="IncidentManagementProcessRules" updateNumber="25">
+            <schemaBrowser>
+                <package>com.oracle.xmlns.bpm.bpmobject.data.incident</package>
+                <namespace>http://xmlns.oracle.com/bpm/bpmobject/Data/Incident</namespace>
+            </schemaBrowser>
+            <schemaImport namespace="http://xmlns.oracle.com/bpm/bpmobject/Data/Incident" localPart="Incident.xsd" schemaLocation="businessCatalog/Data/Incident.xsd">
+                <import namespace="http://xmlns.oracle.com/bpm/bpmobject/Data/Incident" localPart="Incident.xsd" schemaLocation="businessCatalog/Data/Incident.xsd"/>
+            </schemaImport>
+        </dictionary>
+    </schemaInformation>
+</decisionServices>

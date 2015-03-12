@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/bpel/workflow/task" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:tns="http://xmlns.oracle.com/bpel/workflow/task" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://xmlns.oracle.com/bpm/bpmobject/Data/Incident">
+   <import namespace="http://xmlns.oracle.com/bpm/bpmobject/Data/Incident" schemaLocation="/C:/Users/JorgeEsteban/dev/sysco/labs/lab-ougn15-acm/IncidentManagementApp/IncidentManagementProcess/SOA/\businessCatalog/Data/Incident.xsd"/>
+   <element name="ActivityInputs" type="tns:ActivityInputsType"/>
+   <complexType name="ActivityInputsType">
+      <sequence>
+         <element ref="ns1:Incident" maxOccurs="1" minOccurs="0"/>
+      </sequence>
+   </complexType>
+</schema>

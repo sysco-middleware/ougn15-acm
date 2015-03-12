@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://ougn15-acm:7011/soa-infra/services/default/IncidentManagementProcess/IncidentManagementProcess.service?WSDL#%7Bhttp%3A%2F%2Fxmlns.oracle.com%2FCaseService%7DIncidentManagementProcess.service"
+          uri="../com/oracle/xmlns/caseservice/IncidentManagementProcess.service.wsdl"/>
+</catalog>

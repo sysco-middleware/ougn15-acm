@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <?audit suppress oracle.ide.xml.validation-error?>
+    <af:panelGroupLayout layout="vertical" id="pgl1">
+        <af:panelHeader text="Incident N° #{bindings.IncidentId.inputValue}" id="ph1">
+            <af:panelFormLayout id="pfl1">
+                <af:panelLabelAndMessage label="#{bindings.RequestDate.hints.label}" id="plam3">
+                    <af:outputText value="#{bindings.RequestDate.inputValue}"
+                                   shortDesc="#{bindings.RequestDate.hints.tooltip}" id="ot3">
+                        <af:convertDateTime pattern="#{bindings.RequestDate.format}"/>
+                    </af:outputText>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.CategoryName.hints.label}" id="plam4">
+                    <af:outputText value="#{bindings.CategoryName.inputValue}"
+                                   shortDesc="#{bindings.CategoryName.hints.tooltip}" id="ot4"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.Description.hints.label}" id="plam5">
+                    <af:outputText value="#{bindings.Description.inputValue}"
+                                   shortDesc="#{bindings.Description.hints.tooltip}" id="ot5"/>
+                </af:panelLabelAndMessage>
+                <af:panelLabelAndMessage label="#{bindings.CurrentStatus.hints.label}" id="plam6">
+                    <af:outputText value="#{bindings.CurrentStatus.inputValue}"
+                                   shortDesc="#{bindings.CurrentStatus.hints.tooltip}" id="ot6"/>
+                </af:panelLabelAndMessage>
+                <f:facet name="footer"/>
+            </af:panelFormLayout>
+        </af:panelHeader>
+        <af:panelHeader text="Attentions" id="ph2">
+            <af:table value="#{bindings.IncidentAttentionsView2.collectionModel}" var="row"
+                      rows="#{bindings.IncidentAttentionsView2.rangeSize}"
+                      emptyText="#{bindings.IncidentAttentionsView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0" fetchSize="#{bindings.IncidentAttentionsView2.rangeSize}" id="t1"
+                      partialTriggers="::b1 ::b2 ::b3 ::b4 ::b6" width="90%" columnStretching="last">
+                <af:column headerText="Id" id="c1">
+                    <af:outputText value="#{row.IncidentAttentionId}"
+                                   shortDesc="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.tooltip}"
+                                   id="ot1">
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.IncidentAttentionsView2.hints.IncidentAttentionId.format}"/>
+                    </af:outputText>
+                </af:column>
+                <af:column headerText="#{bindings.IncidentAttentionsView2.hints.AttentionDate.label}" id="c2">
+                    <af:outputText value="#{row.AttentionDate}"
+                                   shortDesc="#{bindings.IncidentAttentionsView2.hints.AttentionDate.tooltip}" id="ot2">
+                        <af:convertDateTime pattern="#{bindings.IncidentAttentionsView2.hints.AttentionDate.format}"/>
+                    </af:outputText>
+                </af:column>
+                <af:column headerText="#{bindings.IncidentAttentionsView2.hints.Username.label}" id="c3">
+                    <af:outputText value="#{row.Username}"
+                                   shortDesc="#{bindings.IncidentAttentionsView2.hints.Username.tooltip}" id="ot7"
+                                   inlineStyle="font-style:italic;"/>
+                </af:column>
+                <af:column headerText="#{bindings.IncidentAttentionsView2.hints.Actions.label}" id="c4">
+                    <af:outputText value="#{row.Actions}"
+                                   shortDesc="#{bindings.IncidentAttentionsView2.hints.Actions.tooltip}" id="ot8"
+                                   inlineStyle="font-weight:bold;"/>
+                </af:column>
+            </af:table>
+            <af:panelBox text="Attention" id="pb1">
+                <f:facet name="toolbar"/>
+                <af:panelFormLayout id="pfl2">
+                    <af:inputText value="#{bindings.IncidentAttentionId.inputValue}"
+                                  label="#{bindings.IncidentAttentionId.hints.label}"
+                                  columns="#{bindings.IncidentAttentionId.hints.displayWidth}"
+                                  maximumLength="#{bindings.IncidentAttentionId.hints.precision}"
+                                  shortDesc="#{bindings.IncidentAttentionId.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.IncidentAttentionId.validator}"/>
+                        <af:convertNumber groupingUsed="false" pattern="#{bindings.IncidentAttentionId.format}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.AttentionDate.inputValue}"
+                                  label="#{bindings.AttentionDate.hints.label}"
+                                  columns="#{bindings.AttentionDate.hints.displayWidth}"
+                                  shortDesc="#{bindings.AttentionDate.hints.tooltip}" id="id1">
+                        <f:validator binding="#{bindings.AttentionDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.AttentionDate.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.Actions.inputValue}" label="#{bindings.Actions.hints.label}"
+                                  required="#{bindings.Actions.hints.mandatory}"
+                                  columns="#{bindings.Actions.hints.displayWidth}"
+                                  maximumLength="#{bindings.Actions.hints.precision}"
+                                  shortDesc="#{bindings.Actions.hints.tooltip}" id="it3" rows="4">
+                        <f:validator binding="#{bindings.Actions.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.Username.inputValue}" label="#{bindings.Username.hints.label}"
+                                  columns="#{bindings.Username.hints.displayWidth}"
+                                  maximumLength="#{bindings.Username.hints.precision}"
+                                  shortDesc="#{bindings.Username.hints.tooltip}" id="it4">
+                        <f:validator binding="#{bindings.Username.validator}"/>
+                    </af:inputText>
+                    <f:facet name="footer">
+                        <af:panelGroupLayout layout="vertical" id="pgl2">
+                            <af:panelGroupLayout layout="horizontal" id="pgl3">
+                                <af:button actionListener="#{bindings.First.execute}" text="First"
+                                           disabled="#{!bindings.First.enabled}" partialSubmit="true" id="b1"/>
+                                <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                                           disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b2"/>
+                                <af:button actionListener="#{bindings.Next.execute}" text="Next"
+                                           disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="b3"/>
+                                <af:button actionListener="#{bindings.Last.execute}" text="Last"
+                                           disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="b4"/>
+                            </af:panelGroupLayout>
+                            <af:panelGroupLayout id="pgl4" layout="horizontal">
+                                <af:button actionListener="#{bindings.CreateInsert.execute}" text="New Attention"
+                                           disabled="#{!bindings.CreateInsert.enabled}" id="b6"/>
+                            </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                </af:panelFormLayout>
+            </af:panelBox>
+        </af:panelHeader>
+        <af:panelGroupLayout id="pgl5">
+            <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}"
+                       id="b10"/>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+</jsp:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="CreateIncidentPageDef"
+                Package="Incident">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+    </variableIterator>
+    <iterator Binds="root" RangeSize="25" DataControl="IncidentManagerDC" id="IncidentManagerDCIterator"/>
+    <accessorIterator MasterBinding="IncidentManagerDCIterator" Binds="incidents" RangeSize="25"
+                      DataControl="IncidentManagerDC" BeanClass="beans.Incident" id="incidentsIterator"/>
+    <accessorIterator MasterBinding="IncidentManagerDCIterator" Binds="newIncident" RangeSize="25"
+                      DataControl="IncidentManagerDC" BeanClass="beans.Incident" id="newIncidentIterator"/>
+    <accessorIterator MasterBinding="IncidentManagerDCIterator" Binds="categories" RangeSize="25"
+                      DataControl="IncidentManagerDC" BeanClass="java.lang.String" id="categoriesIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="newIncidentIterator" id="employee_id">
+      <AttrNames>
+        <Item Value="employee_id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="newIncidentIterator" id="request_date">
+      <AttrNames>
+        <Item Value="request_date"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="newIncidentIterator" id="category_name">
+      <AttrNames>
+        <Item Value="category_name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="newIncidentIterator" id="description">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="newIncidentIterator" id="date">
+      <AttrNames>
+        <Item Value="date"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction id="createIncident" RequiresUpdateModel="true" Action="invokeMethod" MethodName="createIncident"
+                  IsViewObjectMethod="false" DataControl="IncidentManagerDC"
+                  InstanceName="data.IncidentManagerDC.dataProvider">
+      <NamedData NDName="employee_id" NDValue="#{bindings.employee_id.inputValue}" NDType="java.lang.String"/>
+      <NamedData NDName="request_date" NDValue="#{bindings.date.inputValue}" NDType="java.util.Date"/>
+      <NamedData NDName="category_name" NDValue="#{bindings.categories.inputValue}" NDType="java.lang.String"/>
+      <NamedData NDName="description" NDValue="#{bindings.description.inputValue}" NDType="java.lang.String"/>
+    </methodAction>
+    <methodAction id="getPicture1" RequiresUpdateModel="true" Action="invokeMethod" MethodName="getPicture"
+                  IsViewObjectMethod="false" DataControl="IncidentManagerDC"
+                  InstanceName="data.IncidentManagerDC.dataProvider"/>
+    <attributeValues IterBinding="IncidentManagerDCIterator" id="imagePhoto">
+      <AttrNames>
+        <Item Value="imagePhoto"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="categoriesIterator" ListOperMode="navigation" ListIter="categoriesIterator" id="categories"
+          DTSupportsMRU="true" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="element"/>
+      </AttrNames>
+    </list>
+  </bindings>
+</pageDefinition>

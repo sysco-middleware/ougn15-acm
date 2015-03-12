@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfmf:features xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adfmf="http://xmlns.oracle.com/adf/mf">
+  <adfmf:feature id="Incident" name="Incident" vendor="SYSCO AS" version="1.0.0" icon="Incident/er_icon.png"
+                 image="Incident/er_icon.png">
+    <adfmf:content id="Incident.3">
+      <adfmf:amx file="Incident/login.amx"/>
+    </adfmf:content>
+    <adfmf:content id="Incident.1">
+      <adfmf:amx file="Incident/ListIncidents.amx"/>
+    </adfmf:content>
+    <adfmf:content id="Incident.2">
+      <adfmf:amx file="Incident/CreateIncident.amx"/>
+    </adfmf:content>
+    <adfmf:content id="Incident.4">
+      <adfmf:amx file="Incident/Detail.amx"/>
+    </adfmf:content>
+  </adfmf:feature>
+</adfmf:features>

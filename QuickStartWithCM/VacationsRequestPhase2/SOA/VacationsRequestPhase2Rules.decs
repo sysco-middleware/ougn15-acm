@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="VacationsRequestPhase2Rules">
+   <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="myRuleEngine">
+      <repository type="SCA-Archive">
+         <path>projectInfo/oracle/rules/VacationsRequestPhase2Rules.rules</path>
+      </repository>
+   </ruleEngineProvider>
+   <decisionService name="VacationsRequestPhase2Rules_VacationsRequestPhase2Rules" ruleEngineProviderReference="myRuleEngine" targetNamespace="http://xmlns.oracle.com/bpm/case/caseDecision/VacationsRequestPhase2Rules_VacationsRequestPhase2Rules">
+      <catalog>VacationsRequestPhase2Rules</catalog>
+      <pattern name="CallFunctionStateless">
+         <arguments>
+            <call>VacationsRequestPhase2Rules.VacationsRequestPhase2Rules</call>
+         </arguments>
+      </pattern>
+      <pattern name="CallFunctionStateful">
+         <arguments>
+            <call>VacationsRequestPhase2Rules.VacationsRequestPhase2Rules</call>
+         </arguments>
+      </pattern>
+   </decisionService>
+</decisionServices>

@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<hwTaskFlows xmlns="http://xmlns.oracle.com/bpel/workflow/hwTaskFlowProperties">
+   <ApplicationName>worklist</ApplicationName>
+   <LookupType>LOCAL</LookupType>
+   <TaskFlowDeploy>false</TaskFlowDeploy>
+   <TaskFlowServer>
+      <hostName/>
+      <httpPort/>
+      <httpsPort/>
+   </TaskFlowServer>
+<hwTaskFlow><WorkflowName>AttendIncident</WorkflowName><TaskDefinitionNamespace>http://xmlns.oracle.com/IncidentManagementApp/IncidentManagementProcess/AttendIncident</TaskDefinitionNamespace><TaskFlowId>AttendIncident_TaskFlow</TaskFlowId><TaskFlowFileName>WEB-INF/AttendIncident_TaskFlow.xml</TaskFlowFileName></hwTaskFlow></hwTaskFlows>

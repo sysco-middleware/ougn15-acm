@@ -1,0 +1,332 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="IncidentManagementProcessService.xml"/>
+      <url path="IncidentManagementProcess.service.wsdl"/>
+      <url path="IncidentManagementProcess.serviceCase.xsd"/>
+      <url path="IncidentManagementProcess.serviceExtensibleElements.xsd"/>
+      <url path="IncidentManagementProcess.serviceCaseService.xsd"/>
+      <url path="IncidentManagementProcess.serviceCaseMetadataCommon.xsd"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TStakeHolder.java"/>
+      <url path="types/TForceCloseCaseOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/TExtensibleMixedContentElements.java"/>
+      <url path="types/package-info.java"/>
+      <url path="types/TCredential.java"/>
+      <url path="types/TCaseServiceFaultMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/Comment.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TTranslatableValueTypeEnum.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TComments.java"/>
+      <url path="types/StartCaseInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TIdentity.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TMilestone.java"/>
+      <url path="types/CaseServiceFaultMessage.java"/>
+      <url path="types/AbortCaseOutputMessage.java"/>
+      <url path="types/TMilestoneInputMessage.java"/>
+      <url path="CaseServicePortType.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TCaseObjectEnum.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/package-info.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TPermissionTag.java"/>
+      <url path="types/AttainMilestoneOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCase.java"/>
+      <url path="types/ReopenCaseOutputMessage.java"/>
+      <url path="types/ResumeCaseOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCompletedCaseActivity.java"/>
+      <url path="types/AbortCaseInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCompletedCaseActivityList.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TStateEnum.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TStakeHolderMember.java"/>
+      <url path="types/RevokeMilestoneOutputMessage.java"/>
+      <url path="IncidentManagementProcessService.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TStaticOrXpathType.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/TDocumentation.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TMilestones.java"/>
+      <url path="types/TSuspendResumeAbortCaseOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TIdentityTypeEnum.java"/>
+      <url path="types/TCloseCaseOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TActionsPermittedForCaseObject.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCaseFabricHeaderProperty.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TComment.java"/>
+      <url path="types/TForceCloseCaseInputMessage.java"/>
+      <url path="types/CloseCaseOutputMessage.java"/>
+      <url path="types/SuspendCaseOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TStaticOrXPath.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TUserActions.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TUserPermissions.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TTranslatableValue.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TActionEnum.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TLink.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/Case.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TResource.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TSca.java"/>
+      <url path="types/RevokeMilestoneInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TStakeHolderMembers.java"/>
+      <url path="CaseServicePortClient.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TLinks.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCaseLinkRelationship.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TData.java"/>
+      <url path="types/TCloseCaseInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/ObjectFactory.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TStakeHolders.java"/>
+      <url path="types/StartCaseOutputMessage.java"/>
+      <url path="types/ForceCloseCaseOutputMessage.java"/>
+      <url path="types/TStartCaseInputMessage.java"/>
+      <url path="types/CaseIdentifier.java"/>
+      <url path="types/CloseCaseInputMessage.java"/>
+      <url path="types/TCaseIdentifier.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/ObjectFactory.java"/>
+      <url path="types/TBpmContext.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/package-info.java"/>
+      <url path="types/SuspendCaseInputMessage.java"/>
+      <url path="types/ObjectFactory.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TActionUserCanPerform.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCategory.java"/>
+      <url path="types/TStartCaseOutputMessage.java"/>
+      <url path="CaseServiceFaultMessage.java"/>
+      <url path="types/TMilestoneOutputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCaseObjectPermission.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/TBoolean.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TPermissionTagEnum.java"/>
+      <url path="types/ResumeCaseInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/TCaseHeader.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/ObjectFactory.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/caseinstance/model/Milestone.java"/>
+      <url path="types/ReopenCaseInputMessage.java"/>
+      <url path="types/ForceCloseCaseInputMessage.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/TResourceIdentityType.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/extension/model/TExtensibleElements.java"/>
+      <url path="types/TSuspendResumeAbortCaseInputMessage.java"/>
+      <url path="types/AttainMilestoneInputMessage.java"/>
+      <url path="types/BpmContext.java"/>
+      <url path="../../../../oracle/bpm/casemgmt/metadata/common/model/package-info.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="IncidentManagementProcessService.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="CaseServicePortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="ougn15-acm" port="7011" path="/soa-infra/services/default/IncidentManagementProcess/IncidentManagementProcess.service" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="CaseServicePort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="com.oracle.xmlns.caseservice.CaseServicePortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="CaseServicePort"/>
+            <hash n="OPERATIONS">
+               <hash n="abortCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="attainMilestone">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="closeCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="forceCloseCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="reopenCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="resumeCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="revokeMilestone">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="startCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="suspendCase">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_POLICY">
+                  <value n="addressing"/>
+                  <hash n="GLOBAL_CONFIG_PROPERTIES"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <list n="wsconfig"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="ougn15-acm" port="7011" path="/soa-infra/services/default/IncidentManagementProcess/IncidentManagementProcess.service"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="IncidentManagementProcess.service"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://xmlns.oracle.com/CaseService"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../IncidentManagementProcessProxy.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="IncidentManagementProcess.serviceCase.xsd"/>
+         <url path="IncidentManagementProcess.serviceExtensibleElements.xsd"/>
+         <url path="IncidentManagementProcess.serviceCaseService.xsd"/>
+         <url path="IncidentManagementProcess.serviceCaseMetadataCommon.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="IncidentManagementProcess.service.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://xmlns.oracle.com/CaseService}CaseServicePortType"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/CaseService}CaseServiceBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TStartCaseOutputMessage.startCase.com.oracle.xmlns.caseservice.types.TStartCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TMilestoneOutputMessage.attainMilestone.com.oracle.xmlns.caseservice.types.TMilestoneInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TMilestoneOutputMessage.revokeMilestone.com.oracle.xmlns.caseservice.types.TMilestoneInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.abortCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.suspendCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.resumeCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TCloseCaseOutputMessage.closeCase.com.oracle.xmlns.caseservice.types.TCloseCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.reopenCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.oracle.xmlns.caseservice.types.TForceCloseCaseOutputMessage.forceCloseCase.com.oracle.xmlns.caseservice.types.TForceCloseCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="fc09d1c2-014b-1000-8003-c0a83801a178"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="CaseServicePort"/>
+               <value n="PORT_BINDING_NAME" v="{http://xmlns.oracle.com/CaseService}CaseServiceBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TStartCaseOutputMessage.startCase.com.oracle.xmlns.caseservice.types.TStartCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TMilestoneOutputMessage.attainMilestone.com.oracle.xmlns.caseservice.types.TMilestoneInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TMilestoneOutputMessage.revokeMilestone.com.oracle.xmlns.caseservice.types.TMilestoneInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.abortCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.suspendCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.resumeCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TCloseCaseOutputMessage.closeCase.com.oracle.xmlns.caseservice.types.TCloseCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseOutputMessage.reopenCase.com.oracle.xmlns.caseservice.types.TSuspendResumeAbortCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.oracle.xmlns.caseservice.types.TForceCloseCaseOutputMessage.forceCloseCase.com.oracle.xmlns.caseservice.types.TForceCloseCaseInputMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="ougn15-acm" port="7011" path="/soa-infra/services/default/IncidentManagementProcess/IncidentManagementProcess.service"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://xmlns.oracle.com/CaseService}CaseServicePortType"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="com.oracle.xmlns.caseservice.CaseServicePortTypeImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="com.oracle.xmlns.caseservice.CaseServicePortType"/>
+               <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="com.oracle.xmlns.caseservice.CaseServicePortType"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../IncidentManagementProcessProxy.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://xmlns.oracle.com/CaseService"/>
+         <value n="WS_URI" v="IncidentManagementProcess.service"/>
+         <url n="WS_WSDL_FILE" path="IncidentManagementProcess.service.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

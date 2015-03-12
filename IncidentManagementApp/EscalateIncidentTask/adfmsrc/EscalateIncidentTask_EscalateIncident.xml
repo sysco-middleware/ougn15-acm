@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.13.52"
+          id="EscalateIncidentTask_EscalateIncident" BeanClass="EscalateIncidentTask_EscalateIncident"
+          isJavaBased="false">
+  <MethodAccessor IsCollection="false" Type="EscalateIncidentTask_EscalateIncident.getTaskDetails"
+                  BeanClass="EscalateIncidentTask_EscalateIncident.getTaskDetails" id="getTaskDetails"
+                  ReturnNodeName="Return">
+    <ParameterInfo id="bpmWorklistContext" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="bpmWorklistTaskId" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="bpmWorklistTaskVersion" Type="java.lang.String" isStructured="false"/>
+  </MethodAccessor>
+</JavaBean>

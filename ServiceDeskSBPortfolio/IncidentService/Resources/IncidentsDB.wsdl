@@ -1,0 +1,62 @@
+<wsdl:definitions
+     name="IncidentsDB"
+     targetNamespace="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceDeskSBPortfolio/IncidentService/IncidentsDB"
+     xmlns:tns="http://xmlns.oracle.com/pcbpel/adapter/db/ServiceDeskSBPortfolio/IncidentService/IncidentsDB"
+     xmlns:jca="http://xmlns.oracle.com/pcbpel/wsdl/jca/"
+     xmlns:plt="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"
+     xmlns:top="http://xmlns.oracle.com/pcbpel/adapter/db/top/IncidentsDB"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+  <plt:partnerLinkType name="IncidentsDB_plt" >
+    <plt:role name="IncidentsDB_role" >
+      <plt:portType name="tns:IncidentsDB_ptt" />
+    </plt:role>
+  </plt:partnerLinkType>
+    <wsdl:types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" >
+        <import namespace="http://xmlns.oracle.com/pcbpel/adapter/db/top/IncidentsDB" schemaLocation="IncidentsDB_table.xsd" />
+      </schema>
+    </wsdl:types>
+    <wsdl:message name="IncidentsDBSelect_inputParameters">
+        <wsdl:part name="IncidentsDBSelect_inputParameters" element="top:IncidentsDBSelectInputParameters"/>
+    </wsdl:message>
+    <wsdl:message name="selectByPrimaryKey_inputParameters">
+        <wsdl:part name="selectByPrimaryKey_inputParameters" element="top:IncidentsPrimaryKey"/>
+    </wsdl:message>
+    <wsdl:message name="Incidents_msg">
+        <wsdl:part name="Incidents" element="top:Incidents"/>
+    </wsdl:message>
+    <wsdl:message name="IncidentsCollection_msg">
+        <wsdl:part name="IncidentsCollection" element="top:IncidentsCollection"/>
+    </wsdl:message>
+    <wsdl:portType name="IncidentsDB_ptt">
+        <wsdl:operation name="merge">
+            <wsdl:input message="tns:IncidentsCollection_msg"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="insert">
+            <wsdl:input message="tns:IncidentsCollection_msg"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="update">
+            <wsdl:input message="tns:IncidentsCollection_msg"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="delete">
+            <wsdl:input message="tns:IncidentsCollection_msg"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="IncidentsDBSelect">
+            <wsdl:input message="tns:IncidentsDBSelect_inputParameters"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="selectByPrimaryKey">
+            <wsdl:input message="tns:selectByPrimaryKey_inputParameters"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+        <wsdl:operation name="queryByExample">
+            <wsdl:input message="tns:Incidents_msg"/>
+            <wsdl:output message="tns:IncidentsCollection_msg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

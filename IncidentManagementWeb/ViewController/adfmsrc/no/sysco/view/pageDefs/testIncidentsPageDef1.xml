@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.13.52" id="testIncidentsPageDef1"
+                Package="no.sysco.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="incidentstaskflow1" taskFlowId="/WEB-INF/incidents-task-flow.xml#incidents-task-flow"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="incident_id" value="1"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>

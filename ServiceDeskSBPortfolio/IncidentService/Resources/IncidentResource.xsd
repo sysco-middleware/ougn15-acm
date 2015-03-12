@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sysco.no/IncidentsResource_ReportIncident_request" targetNamespace="http://sysco.no/IncidentsResource_ReportIncident_request" elementFormDefault="qualified" xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd" nxsd:version="JSON" nxsd:encoding="US-ASCII">
+   <xsd:element name="incident">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="topLevelArray">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="incident_id" type="xsd:integer" minOccurs="0"/>
+                     <xsd:element name="employee_id" type="xsd:integer"/>
+                     <xsd:element name="request_date" type="xsd:dateTime"/>
+                     <xsd:element name="category_name" type="xsd:string"/>
+                     <xsd:element name="description" type="xsd:string"/>
+                     <xsd:element name="current_status" type="xsd:string"/>
+                     <xsd:element name="attentions" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                           <xsd:sequence>
+                              <xsd:element name="incident_attention_id" type="xsd:integer"/>
+                              <xsd:element name="attention_date" type="xsd:dateTime"/>
+                              <xsd:element name="actions" type="xsd:string"/>
+                              <xsd:element name="username" type="xsd:string"/>
+                           </xsd:sequence>
+                        </xsd:complexType>
+                     </xsd:element>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+<xsd:annotation xmlns="">
+      <xsd:appinfo>NXSDSAMPLE=/C:/Users/JorgeEsteban/dev/sysco/labs/lab-ougn15-acm/ServiceDeskSBPortfolio/IncidentService/Resources/incident.json</xsd:appinfo>
+      <xsd:appinfo>USEHEADER=false</xsd:appinfo>
+   </xsd:annotation>
+</xsd:schema>
